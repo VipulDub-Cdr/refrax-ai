@@ -148,7 +148,7 @@ export default function Dashboard() {
 
                     {
                         help &&
-                        <CardSpotlightDemo/>
+                        <div className="absolute bottom-0 left-0 m-2 border-2 h-40 w-40">Help</div>
                     }
 
                     <div className="absolute top-0 left-0 flex flex-row justify-start">
