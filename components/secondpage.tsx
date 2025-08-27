@@ -51,7 +51,7 @@ const BigCardImageRight: React.FC<MyComponentProps> = ({ url, heading, descripti
 
                 <div className="text-gray-800 md:w-[60%]">{description}</div>
 
-                <Link href="/register">
+                <Link href="/signin">
                     <button className="rounded-lg md:rounded-full px-4 py-1 text-white font-medium bg-black my-1 hover:cursor-pointer hover:bg-white hover:text-black hover:border-1 hover:border-black" onClick={() => { window.open("") }}>
                         Try for free
                     </button>

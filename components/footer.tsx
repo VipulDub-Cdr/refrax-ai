@@ -20,10 +20,8 @@ export default function Footer() {
                 </Link>
             </div>
             <div className="w-full flex flex-col md:flex-row justify-start items-start md:justify-end md:items-start m-4 gap-4">
-                <a className="flex flex-row justify-center items-center gap-2 text-sm md:text-lg text-white" href="http://" target="_blank" rel="noopener noreferrer">
-                    <span className="hover:text-neutral-300 mt-1"><span className="font-bold">Contact: </span>vipuldubey041@gmail.com</span>
-                    {/* <img className="h-10 w-10 cursor-pointer" src="https://img.icons8.com/?size=100&id=P7UIlhbpWzZm&format=png&color=000000" alt="" /> */}
-                </a>
+                <span className="text-white hover:text-neutral-900 mt-1"><span className="font-bold">Contact: </span>vipuldubey041@gmail.com</span>
+                {/* <img className="h-10 w-10 cursor-pointer" src="https://img.icons8.com/?size=100&id=P7UIlhbpWzZm&format=png&color=000000" alt="" /> */}
                 <a href="http://www.linkedin.com/in/vipul-dubey-541629256" target="_blank" rel="noopener noreferrer">
                     <img className="h-10 w-10 cursor-pointer" src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000" alt="" />
                 </a>

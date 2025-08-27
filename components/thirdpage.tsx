@@ -12,22 +12,22 @@ export default function Thirdpage() {
     return <div id="third-page" className="md:pt-8 h-full w-full flex flex-col justify-center items-center md:justify-start">
 
         <div className='w-full md:w-[60%] flex flex-col justify-start items-center my-4'>
-            <div className='text-xl text-[#F17144] font-medium'>My winboard</div>
-            <div className=' text-3xl md:text-[2.6rem] text-center'>Timely Simplifies time tracking and productivity with AI</div>
+            <div className='text-xl text-[#F17144] font-medium'>Impact of Refrax AI</div>
+            <div className=' text-3xl md:text-[2.6rem] text-center'> Effortlessly Formats Your Code to Match Your Unique Style with AI``</div>
         </div>
 
         <div id="third-page" className='w-full bg-gray-200 my-4'>
             <Marquee direction="left" className="w-full flex flex-row justify-between items-center p-2 gap-2 md:gap-4 md:p-6 my-2">
-                <HeroCard url="" heading="125+" description='lorem ipsum dolor sit amet consectetur adipisicing' />
-                <HeroCard url="" heading="98%" description='lorem ipsum dolor sit amet consectetur adipisicing' />
-                <HeroCard url="" heading="40%" description='lorem ipsum dolor sit amet consectetur adipisicing' />
-                <HeroCard url="" heading="65%" description='lorem ipsum dolor sit amet consectetur adipisicing' />
+                <HeroCard url="" heading="120%" description='Increased code consistency across projects' />
+                <HeroCard url="" heading="70%" description='Faster onboarding for new developers' />
+                <HeroCard url="" heading="95%" description='Improved team collaboration and coding standard adherence' />
+                <HeroCard url="" heading="60%" description='Reduction in style-related code review comments' />
             </Marquee>
             <Marquee direction="right" className="w-full flex flex-row justify-between items-center p-2 gap-2 md:gap-4 md:p-6 my-2">
-                <HeroCard url="" heading="125+" description='lorem ipsum dolor sit amet consectetur adipisicing' />
-                <HeroCard url="" heading="98%" description='lorem ipsum dolor sit amet consectetur adipisicing' />
-                <HeroCard url="" heading="40%" description='lorem ipsum dolor sit amet consectetur adipisicing' />
-                <HeroCard url="" heading="65%" description='lorem ipsum dolor sit amet consectetur adipisicing' />
+                <HeroCard url="" heading="90%" description='Accuracy in replicating personal coding style' />
+                <HeroCard url="" heading="85%" description='Boost in developer productivity and efficiency' />
+                <HeroCard url="" heading="75%" description='Reduction in errors due to misaligned code formatting' />
+                <HeroCard url="" heading="95%" description='Improved team collaboration and coding standard adherence' />
             </Marquee>
         </div>
 
