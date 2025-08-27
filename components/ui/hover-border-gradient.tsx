@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { motion } from "motion/react";
 import { cn } from "@/lib/utils";
 
@@ -13,11 +13,9 @@ interface HoverBorderGradientBaseProps {
   clockwise?: boolean;
 }
 
-// Polymorphic type helper
-type PolymorphicProps<
-  T extends React.ElementType,
-  Props = {}
-> = Props & React.ComponentPropsWithoutRef<T> & { as?: T };
+// Polymorphic type helper (use `object` instead of `{}` to satisfy ESLint)
+type PolymorphicProps<T extends React.ElementType, Props = object> = Props &
+  React.ComponentPropsWithoutRef<T> & { as?: T };
 
 // Main component props
 type HoverBorderGradientProps<T extends React.ElementType = "button"> =
@@ -37,14 +35,18 @@ export function HoverBorderGradient<T extends React.ElementType = "button">({
   const [hovered, setHovered] = useState(false);
   const [direction, setDirection] = useState<Direction>("TOP");
 
-  const rotateDirection = (current: Direction): Direction => {
-    const directions: Direction[] = ["TOP", "LEFT", "BOTTOM", "RIGHT"];
-    const currentIndex = directions.indexOf(current);
-    const nextIndex = clockwise
-      ? (currentIndex - 1 + directions.length) % directions.length
-      : (currentIndex + 1) % directions.length;
-    return directions[nextIndex];
-  };
+  // useCallback ensures the function reference is stable for useEffect
+  const rotateDirection = useCallback(
+    (current: Direction): Direction => {
+      const directions: Direction[] = ["TOP", "LEFT", "BOTTOM", "RIGHT"];
+      const currentIndex = directions.indexOf(current);
+      const nextIndex = clockwise
+        ? (currentIndex - 1 + directions.length) % directions.length
+        : (currentIndex + 1) % directions.length;
+      return directions[nextIndex];
+    },
+    [clockwise]
+  );
 
   const movingMap: Record<Direction, string> = {
     TOP: "radial-gradient(20.7% 50% at 50% 0%, hsl(0,0%,100%) 0%, rgba(255,255,255,0) 100%)",
@@ -63,7 +65,7 @@ export function HoverBorderGradient<T extends React.ElementType = "button">({
       }, duration * 1000);
       return () => clearInterval(interval);
     }
-  }, [hovered, duration]);
+  }, [hovered, duration, rotateDirection]);
 
   return (
     <Tag
@@ -83,15 +85,22 @@ export function HoverBorderGradient<T extends React.ElementType = "button">({
       >
         {children}
       </div>
+
       <motion.div
         className="flex-none inset-0 overflow-hidden absolute z-0 rounded-[inherit]"
-        style={{ filter: "blur(2px)", position: "absolute", width: "100%", height: "100%" }}
+        style={{
+          filter: "blur(2px)",
+          position: "absolute",
+          width: "100%",
+          height: "100%",
+        }}
         initial={{ background: movingMap[direction] }}
         animate={{
           background: hovered ? [movingMap[direction], highlight] : movingMap[direction],
         }}
         transition={{ ease: "linear", duration }}
       />
+
       <div className="bg-black absolute z-1 flex-none inset-[2px] rounded-[100px]" />
     </Tag>
   );

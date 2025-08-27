@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 import { TypingAnimation } from "@/components/magicui/typing-animation";
 import { ChangeEvent } from "react";
 import { Skeleton } from "@/components/ui/skeleton"
-import {CardSpotlightDemo} from "@/components/cardspotlightDemo";
 import Image from "next/image";
 
 export default function Dashboard() {
