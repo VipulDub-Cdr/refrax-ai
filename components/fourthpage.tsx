@@ -7,9 +7,9 @@ import {
 
 export default function Fourthpage() {
     return (
-        <div id="fourth-page" className="box-content w-screen h-[100%]">
+        <div id="fourth-page" className="w-screen h-[100%]">
 
-            <div className="text-[3.2rem] md:ml-7">FAQs</div>
+            <div className="text-[3.2rem] px-2 md:ml-7">FAQs</div>
 
             <Accordion
                 type="single"

@@ -146,8 +146,31 @@ export default function Dashboard() {
                 <div className={`w-full h-full text-white flex flex-row justify-between items-center`}>
 
                     {
-                        help &&
-                        <div className="absolute bottom-0 left-0 m-2 border-2 h-40 w-40">Help</div>
+                        help && <div className="absolute left-[5%] pt-2 px-4 h-[55%] w-[90%] border-2 border-neutral-900 rounded-xl flex flex-col justify-around gap-2 bg-[#0A0A0A] md:bottom-0 md:left-0 md:w-[22%] md:m-4">
+                            <div className="font-semibold text-xl">Getting Started</div>
+                            <div className="font-medium text-[1.05rem]">Follow these steps: </div>
+                            <div className="flex flex-col px-3 h-full w-full gap-2 md:py-3">
+                                <div className="flex flex-row justify-start items-start gap-2">
+                                    <Image width={50} height={50} src="/tickbox.png" alt="tickbox" className="w-6 h-6" />
+                                    <div className="text-[1rem]">Upload the sample file.</div>
+                                </div>
+                                <div className="flex flex-row justify-start items-start gap-2">
+                                    <Image width={50} height={50} src="/tickbox.png" alt="tickbox" className="w-6 h-6" />
+                                    <div className="text-[1rem]">Upload the file to be formatted according to your writing style.</div>
+                                </div>
+                                    <div className="flex flex-row justify-start items-start gap-2">
+                                        <Image width={50} height={50} src="/tickbox.png" alt="tickbox" className="w-6 h-6" />
+                                        <div className="text-[1rem]"><span className="text-blue-400">Pattern-Oriented:</span> Prioritize user’s style over code quality.</div>
+                                    </div>
+                                    <div className="flex flex-row justify-start items-start gap-2">
+                                        <Image width={50} height={50} src="/tickbox.png" alt="tickbox" className="w-6 h-6" />
+                                        <div className="text-[1rem]"><span className="text-blue-400">Knowledge Thingy: </span>Uses more Efficient coding practices</div>
+                                    </div>
+                            </div>
+                            <div className="">Ensuring your file is properly formatted helps preserve your writing style and maintain accuracy.</div>
+
+                        </div>
+
                     }
 
                     <div className="absolute top-0 left-0 flex flex-row justify-start">
