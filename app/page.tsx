@@ -1,10 +1,7 @@
 "use client"
-import Image from "next/image";
 import SecondPage from "@/components/secondpage";
 import FirstPage from "@/components/firstPage";
 import Link from "next/link";
-import { useEffect } from "react";
-import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import Thirdpage from '@/components/thirdpage';
 import Fourthpage from '@/components/fourthpage';

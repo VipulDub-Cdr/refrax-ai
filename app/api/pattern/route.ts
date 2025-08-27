@@ -2,8 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { userModel } from "@/lib/db";
 import mongoose from "mongoose";
 
-let isConnected = false;
-
 export async function POST(req: NextRequest) {
 
 await mongoose.connect(process.env.MONGODB_URL!);

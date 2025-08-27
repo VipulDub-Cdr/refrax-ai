@@ -5,8 +5,8 @@ import { useEffect, useState } from "react";
 import { TypingAnimation } from "@/components/magicui/typing-animation";
 import { ChangeEvent } from "react";
 import { Skeleton } from "@/components/ui/skeleton"
-import { AnimatedShinyTextDemo } from "@/components/shinytext";
 import {CardSpotlightDemo} from "@/components/cardspotlightDemo";
+import Image from "next/image";
 
 export default function Dashboard() {
     const { data: session, status } = useSession();
@@ -14,7 +14,6 @@ export default function Dashboard() {
     const [rightBar, setrightBar] = useState(false);
     const [patternOriented, setPatternOriented] = useState(true);
     const [knowledgeThingy, setKnowledgeThingy] = useState(false);
-    const [lightMode, setLightMode] = useState(false);
     const [uploadingSample, setUploadingSample] = useState(false);
     const [uploadingCode, setUploadingCode] = useState(false);
     const [ultiseedhiSampleFile, setultiseedhiSampleFile] = useState(false);
@@ -139,13 +138,13 @@ export default function Dashboard() {
     return (
 
 
-        <div className={`${lightMode ? "bg-white " : " bg-[#0A0A0A] "} h-[100vh] w-[100vw]`}>
+        <div className={`bg-[#0A0A0A] h-[100vh] w-[100vw]`}>
 
 
             {session ?
                 //  absolute top-0 left-[26%] md:left-[6.5%] 
 
-                <div className={`w-full h-full ${lightMode ? "text-black" : "text-white"} flex flex-row justify-between items-center`}>
+                <div className={`w-full h-full text-white flex flex-row justify-between items-center`}>
 
                     {
                         help &&
@@ -248,7 +247,7 @@ export default function Dashboard() {
                     </div>
 
                     <button className={`rounded-l-lg h-20 absolute top-0 right-0 md:relative md:flex flex-row justify-center items-center text-2xl bg-neutral-800 ${rightBar ? " w-18 " : " w-10 "}`} onClick={() => { setrightBar(!rightBar) }}>
-                        <img className={`h-8 w-8 transition-all delay-50 duration-500 ${rightBar ? " rotate-180 " : ""}`} src="/backwardArrow.png" alt="" />
+                        <Image width={500} height={500} className={`h-8 w-8 transition-all delay-50 duration-500 ${rightBar ? " rotate-180 " : ""}`} src="/backwardArrow.png" alt="" />
                     </button>
 
                     {/* rightbar for desktop*/}
@@ -261,7 +260,7 @@ export default function Dashboard() {
                                 className="absolute top-0 right-0 m-2 text-white hover:cursor-pointer pr-6"
                                 onClick={() => setrightBar(!rightBar)}
                             >
-                                <img className="h-10 w-10" src="/close.png" alt="" />
+                                <Image width={500} height={500} className="h-10 w-10" src="/close.png" alt="" />
                             </button>
                         )}
                         <pre
@@ -275,7 +274,7 @@ export default function Dashboard() {
                     {/* rightbar for mobile*/}
                     <div className={`absolute right-0 overflow-hidden md:hidden bg-black h-[100vh] transition-all delay-50 duration-500 ${rightBar ? "w-full px-4 py-2 z-1000 " : "w-0"}`}>
                         <button className="absolute top-0 right-0 m-2 text-white hover:cursor-pointer" onClick={() => { setrightBar(!rightBar) }}>
-                            <img className="h-8 w-8" src="/close.png" alt="" />
+                            <Image width={500} height={500} className="h-8 w-8" src="/close.png" alt="" />
                         </button>
                         <pre
                             className="text-white text-sm bg-[#000000] p-3 rounded-lg overflow-x-auto whitespace-pre-wrap"

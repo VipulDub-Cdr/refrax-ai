@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
-import { img } from "motion/react-client";
+import Image from "next/image";
 
 export function HoverBorderGradientDemo() {
   return (
@@ -12,14 +12,14 @@ export function HoverBorderGradientDemo() {
         className="bg-white text-black dark:text-white flex items-center space-x-2"
       >
         <span>Get Started</span>
-        <AceternityLogo />
+        {/* <AceternityLogo /> */}
       </HoverBorderGradient>
     </div>
   );
 }
 
-const AceternityLogo = () => {
-  return (
-    <img className="h-5 w-6" src="https://img.icons8.com/?size=100&id=7404&format=png&color=000000" alt="" />
-  );
-};
+// const AceternityLogo = () => {
+//   return (
+//     <Image width={1000} height={1000} src="/heroButtonLogo.png" alt="heroImage"/>
+//   );
+// };

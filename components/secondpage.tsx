@@ -1,9 +1,8 @@
 // "use client"
 import React from 'react';
 import Link from "next/link";
-import Marquee from 'react-fast-marquee';
 import { useEffect, useRef } from "react";
-
+import Image from 'next/image';
 interface MyComponentProps {
     url: string;
     heading: string;
@@ -32,9 +31,9 @@ export default function SecondPage() {
 
         <div className='mx-7 my-4 lg:mx-5 lg:my-6'><BigCardVideoRight url="" heading="Personalized Code Formatting" description='Refrax AI intelligently adapts to your coding style, allowing you to prioritize either closely following your personal patterns or adhering to best coding practices.' /></div>
 
-        <div className='mx-7 my-4 lg:mx-5 lg:my-6'><BigCardImageLeft url="./responsiveHeroImage.png" heading="Simplistic Responsive Interface" description='Experience a clean, intuitive, and fully responsive user interface designed for developers. Refrax AI makes it effortless to upload files, view transformations, and interact with results across devices.' /></div>
+        <div className='mx-7 my-4 lg:mx-5 lg:my-6'><BigCardImageLeft url="/responsive.png" heading="Simplistic Responsive Interface" description='Experience a clean, intuitive, and fully responsive user interface designed for developers. Refrax AI makes it effortless to upload files, view transformations, and interact with results across devices.' /></div>
 
-        <div className='mx-7 my-4 lg:mx-5 lg:my-6'><BigCardImageRight url="./multimodelHeroImage.png" heading="Smart Code Analysis (Coming Soon)" description='Powered by advanced multi-model analysis, Refrax AI processes your code and report to produce cost-effective, high-quality formatting solutions.' /></div>
+        <div className='mx-7 my-4 lg:mx-5 lg:my-6'><BigCardImageRight url="/multimodelHeroImage.png" heading="Smart Code Analysis (Coming Soon)" description='Powered by advanced multi-model analysis, Refrax AI processes your code and report to produce cost-effective, high-quality formatting solutions.' /></div>
 
     </div>
 }
@@ -44,7 +43,7 @@ const BigCardImageRight: React.FC<MyComponentProps> = ({ url, heading, descripti
     return (
 
         <div className='w-full h-full lg:h-[65vh] rounded-2xl flex flex-col lg:flex-row-reverse justify-start items-start gap-3  bg-[#F4F4F4]'>
-            <img src={url} alt={url} className="w-full h-full object-cover rounded-2xl bg-amber-50 shadow-md -rotate-[0.0008rad]" />
+            <Image width={1000} height={1000} src={url} alt={url} className="w-full h-full object-cover rounded-2xl bg-amber-50 shadow-md -rotate-[0.0008rad]" />
 
             <div className='lg:mx-15 lg:w-full lg:h-full flex flex-col justify-start items-start gap-2 lg:gap-3 my-1 lg:my-0 md:justify-center md:items-start px-1 lg:px-0'>
                 <div className="text-[1.6rem]/7 tracking-tight line opacity-95 text-wrap font-sans">{heading}</div>
@@ -64,7 +63,7 @@ const BigCardImageRight: React.FC<MyComponentProps> = ({ url, heading, descripti
     )
 
 }
-const BigCardVideoRight: React.FC<MyComponentProps> = ({ url, heading, description }) => {
+const BigCardVideoRight: React.FC<MyComponentProps> = ({heading, description }) => {
 
     const videoRef = useRef<HTMLVideoElement | null>(null);
 
@@ -105,7 +104,7 @@ const BigCardImageLeft: React.FC<MyComponentProps> = ({ url, heading, descriptio
     return (
 
         <div className='w-full h-full lg:h-[65vh] rounded-2xl flex flex-col lg:flex-row justify-start items-start gap-3  bg-[#F4F4F4]'>
-            <img src={url} alt={url} className="w-full h-full object-cover rounded-2xl bg-amber-50 shadow-md" />
+            <Image width={1000} height={1000} src={url} alt={url} className="w-full h-full object-cover rounded-2xl bg-amber-50 shadow-md" />
 
             <div className='lg:mx-15 lg:w-full lg:h-full flex flex-col justify-start items-start gap-2 lg:gap-3 my-1 lg:my-0 md:justify-center md:items-start px-1 lg:px-0'>
                 <div className="text-[1.6rem]/7 tracking-tight line opacity-95 text-wrap font-sans">{heading}</div>

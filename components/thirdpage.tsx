@@ -1,5 +1,4 @@
 import Marquee from 'react-fast-marquee';
-import { useEffect, useRef } from "react";
 
 interface MyComponentProps {
     url: string;
@@ -37,7 +36,7 @@ export default function Thirdpage() {
 
 }
 
-const HeroCard: React.FC<MyComponentProps> = ({ url, heading, description }) => {
+const HeroCard: React.FC<MyComponentProps> = ({heading, description }) => {
     return <div className='bg-white w-40 h-25 p-2 md:px-4 md:h-40 md:w-80 border-2 shadow-lg border-neutral-300 hover:bg-[#F17144] hover:text-white rounded-xl mx-4 md:mx-9 flex flex-col justify-center items-start transition-colors delay-50 duration-200'>
         <div className='text-2xl md:text-[2.5rem] font-bold'>{heading}</div>
         <div className='text-[0.8rem] md:text-[1.2rem] font-light'>{description}</div>

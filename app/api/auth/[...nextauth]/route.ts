@@ -10,10 +10,10 @@ const handler = NextAuth({
     }),
   ],
   callbacks: {
-    async redirect({ url, baseUrl }) {
+    async redirect() {
       return "/dashboard";
     },
-    async signIn({ user, account, profile}){
+    async signIn({user}){
 
       await connect(process.env.MONGODB_URL!) 
 

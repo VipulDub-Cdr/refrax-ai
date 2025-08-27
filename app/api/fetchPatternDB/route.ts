@@ -1,9 +1,9 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import {connect} from "mongoose"
 import { userModel } from "@/lib/db";
 import { getServerSession } from "next-auth";
 
-export async function GET(req: NextRequest){
+export async function GET(){
 
         const session = await getServerSession();
         if(!session){

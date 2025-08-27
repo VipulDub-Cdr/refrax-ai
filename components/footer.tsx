@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 
 export default function Footer() {
     return (<div className="h-[30vh] w-[100vw] bg-[#F17144} text-black bg-[#F17144] rounded-t-3xl md:mt-15">
@@ -23,7 +24,7 @@ export default function Footer() {
                 <span className="text-white hover:text-neutral-900 mt-1"><span className="font-bold">Contact: </span>vipuldubey041@gmail.com</span>
                 {/* <img className="h-10 w-10 cursor-pointer" src="https://img.icons8.com/?size=100&id=P7UIlhbpWzZm&format=png&color=000000" alt="" /> */}
                 <a href="http://www.linkedin.com/in/vipul-dubey-541629256" target="_blank" rel="noopener noreferrer">
-                    <img className="h-10 w-10 cursor-pointer" src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000" alt="" />
+                    <Image width={1000} height={1000} className="h-10 w-10 cursor-pointer" src="/linkedin.png" alt="" />
                 </a>
             </div>
 

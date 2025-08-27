@@ -1,5 +1,6 @@
 "use client"
 import { signIn } from "next-auth/react"
+import Image from "next/image";
 
 export default function SignInPage() {
     return (
@@ -10,7 +11,7 @@ export default function SignInPage() {
                 <button onClick={() => {
                     signIn("github");
                 }} className="flex flex-row justify-center items-center gap-4 px-[25%] py-1 text-xl font-medium text-black bg-neutral-300 rounded-2xl hover:cursor-pointer hover:bg-gray-200 shadow-lg/20 transition-all delay-50 duration-300  hover:-translate-y-1" type="button">
-                    <img className="h-10 w-10 " src="https://img.icons8.com/?size=100&id=12599&format=png&color=000000" alt="" />
+                    <Image width={1000} height={1000} className="h-10 w-10 " src="/githubImage.png" alt="" />
                     <div>Github</div>
                 </button>
 
