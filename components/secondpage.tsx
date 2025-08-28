@@ -1,8 +1,9 @@
 // "use client"
 import React from 'react';
-import Link from "next/link";
 import { useEffect, useRef } from "react";
 import Image from 'next/image';
+import { useRouter } from "next/navigation";
+
 interface MyComponentProps {
     url: string;
     heading: string;
@@ -40,6 +41,8 @@ export default function SecondPage() {
 
 const BigCardImageRight: React.FC<MyComponentProps> = ({ url, heading, description }) => {
     
+    const router = useRouter();
+    
     return (
 
         <div className='w-full h-full lg:h-[65vh] rounded-2xl flex flex-col lg:flex-row-reverse justify-start items-start gap-3  bg-[#F4F4F4]'>
@@ -50,11 +53,10 @@ const BigCardImageRight: React.FC<MyComponentProps> = ({ url, heading, descripti
 
                 <div className="text-gray-800 md:w-[60%]">{description}</div>
 
-                <Link href="/signin">
-                    <button className="rounded-lg md:rounded-full px-4 py-1 text-white font-medium bg-black my-1 hover:cursor-pointer hover:bg-white hover:text-black hover:border-1 hover:border-black" onClick={() => { window.open("") }}>
-                        Try for free
-                    </button>
-                </Link>
+                <button className="rounded-lg md:rounded-full px-4 py-1 text-white font-medium bg-black my-1 hover:cursor-pointer hover:bg-white hover:text-black hover:border-1 hover:border-black" onClick={()=>{router.push("/signin")}}>
+                    Try for free
+                </button>
+
             </div>
         </div>
 
@@ -64,6 +66,8 @@ const BigCardImageRight: React.FC<MyComponentProps> = ({ url, heading, descripti
 
 }
 const BigCardVideoRight: React.FC<MyComponentProps> = ({heading, description }) => {
+
+    const router = useRouter();
 
     const videoRef = useRef<HTMLVideoElement | null>(null);
 
@@ -88,11 +92,10 @@ const BigCardVideoRight: React.FC<MyComponentProps> = ({heading, description }) 
 
                 <div className="text-gray-800 md:w-[60%]">{description}</div>
 
-                <Link href="/register">
-                    <button className="rounded-lg md:rounded-full px-4 py-1 text-white font-medium bg-black my-1 hover:cursor-pointer hover:bg-white hover:text-black hover:border-1 hover:border-black" onClick={() => { window.open("") }}>
-                        Try for free
-                    </button>
-                </Link>
+                <button className="rounded-lg md:rounded-full px-4 py-1 text-white font-medium bg-black my-1 hover:cursor-pointer hover:bg-white hover:text-black hover:border-1 hover:border-black" onClick={()=>{router.push("/signin")}}>
+                    Try for free
+                </button>
+
             </div>
         </div>
 
@@ -101,6 +104,9 @@ const BigCardVideoRight: React.FC<MyComponentProps> = ({heading, description }) 
     )
 }
 const BigCardImageLeft: React.FC<MyComponentProps> = ({ url, heading, description }) => {
+
+    const router = useRouter();
+
     return (
 
         <div className='w-full h-full lg:h-[65vh] rounded-2xl flex flex-col lg:flex-row justify-start items-start gap-3  bg-[#F4F4F4]'>
@@ -111,11 +117,10 @@ const BigCardImageLeft: React.FC<MyComponentProps> = ({ url, heading, descriptio
 
                 <div className="text-gray-800 md:w-[60%]">{description}</div>
 
-                <Link href="/register">
-                    <button className="rounded-lg md:rounded-full px-4 py-1 text-white font-medium bg-black my-1 hover:cursor-pointer hover:bg-white hover:text-black hover:border-1 hover:border-black" onClick={() => { window.open("") }}>
-                        Try for free
-                    </button>
-                </Link>
+                <button className="rounded-lg md:rounded-full px-4 py-1 text-white font-medium bg-black my-1 hover:cursor-pointer hover:bg-white hover:text-black hover:border-1 hover:border-black" onClick={()=>{router.push("/signin")}}>
+                    Try for free
+                </button>
+
             </div>
         </div>
 
