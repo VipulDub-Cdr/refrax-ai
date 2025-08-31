@@ -2,8 +2,8 @@ import React from "react";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
-interface InteractiveHoverButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {}
+// ✅ Use type instead of interface to avoid empty interface lint error
+type InteractiveHoverButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
 export const InteractiveHoverButton = React.forwardRef<
   HTMLButtonElement,

@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { HoverBorderGradient } from "./ui/hover-border-gradient";
-import Image from "next/image";
 
 export function HoverBorderGradientDemo() {
   return (

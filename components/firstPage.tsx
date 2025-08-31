@@ -1,4 +1,3 @@
-import Marquee from "react-fast-marquee"
 import Link from "next/link"
 import { HoverBorderGradientDemo } from "./heroButton"
 
