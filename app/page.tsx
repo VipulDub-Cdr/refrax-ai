@@ -6,7 +6,6 @@ import { useRouter } from "next/navigation";
 import Thirdpage from '@/components/thirdpage';
 import Fourthpage from '@/components/fourthpage';
 import Footer from "@/components/footer";
-import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
  
 
 export default function Home() {
@@ -66,14 +65,11 @@ export function Navbar(){
         </Link>
     </div>
 
-      <div className="px-2 md:pr-0 rounded-lg text-black flex flex-row justify-center items-center hover:cursor-pointer" onClick={()=>{router.push("/signin")}}>
-            <InteractiveHoverButtonDemo/>
+      <div className="px-2 md:pr-0 rounded-lg text-white flex flex-row justify-center items-center hover:cursor-pointer" onClick={()=>{router.push("/signin")}}>
+            <div className="bg-black/80 rounded-xl px-3 py-1 hover:bg-zinc-800 transition-all delay-100 duration-300">Sign in</div>
       </div>
       {/* <div className="text-yellow-400">Register</div> */}
 
   </div>
 }
 
-export function InteractiveHoverButtonDemo() {
-  return <InteractiveHoverButton className="text-[1rem] rounded-lg">Sign in</InteractiveHoverButton>;
-}
