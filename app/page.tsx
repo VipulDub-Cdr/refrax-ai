@@ -6,18 +6,20 @@ import { useRouter } from "next/navigation";
 import Thirdpage from '@/components/thirdpage';
 import Fourthpage from '@/components/fourthpage';
 import Footer from "@/components/footer";
+import { InteractiveHoverButton } from "@/components/magicui/interactive-hover-button";
+ 
 
 export default function Home() {
 
   return (
-    <>
+    <div className="">
       {/* my-6 lg:my-9  md:px-50  px-3 */}
-      <div className='fixed w-full top-0 right-0 z-1000 py-2 md:py-2 px-2'>
+      <div className='fixed w-full top-0 right-0 z-1000'>
         <Navbar/>
       </div>
 
       {/* bg-[url('/bgimage.png')] */}
-      <div id="first-page" className="h-[100vh] w-full bg-cover bg-right-bottom md:bg-center">
+      <div id="first-page" className="h-full w-full bg-cover bg-right-bottom md:bg-center bg-gradient-to-b from-zinc-300 to-white" > 
         <FirstPage/>
       </div>
 
@@ -29,7 +31,7 @@ export default function Home() {
 
       <Footer/>
 
-    </>
+    </div>
 
   );
 }
@@ -39,7 +41,7 @@ export function Navbar(){
 
   const router = useRouter();
   //   rounded-3xl shadow-[#cacfe2] shadow-md 
-  return <div className="w-full top-0 right-0 pl-3 md:px-4 py-2 flex flex-row justify-between items-center text-[1.2rem] bg-white/90 "> 
+  return <div className="w-full top-0 right-0 pl-3 md:px-4 py-2 flex flex-row justify-between items-center text-[1.2rem] bg-white/40 backdrop-blur-xl "> 
     
     <div className="flex flex-row justify-between items-center gap-3">
       {/* <div className="border-2 border-gray-300 rounded-2xl px-4 py-3"></div> */}
@@ -51,7 +53,10 @@ export function Navbar(){
         <button className="cursor-pointer hover:underline hover:underline-offset-2">Home</button>
       </Link>
         <Link href="#second-page">
-          <button className="cursor-pointer hover:underline hover:underline-offset-2 text-[#F17144] font-semibold">Demo</button>
+          <button className="relative px-2 cursor-pointer hover:underline hover:underline-offset-2 text-black font-semibold">
+            {/* <div className="absolute right-0 top-0 border-3 border-zinc-600 animate-ping rounded-full bg-sky-400 opacity-75"></div> */}
+            <div className="animate-pulse">Demo</div>
+          </button>
         </Link>
         <Link href="#third-page">
           <button className="cursor-pointer hover:underline hover:underline-offset-2">Impact</button>
@@ -61,10 +66,14 @@ export function Navbar(){
         </Link>
     </div>
 
-      <div className="bg-black px-3 py-1 rounded-3xl text-white flex flex-row justify-center items-center hover:cursor-pointer" onClick={()=>{router.push("/signin")}}>
-        Sign in
+      <div className="px-2 md:pr-0 rounded-lg text-black flex flex-row justify-center items-center hover:cursor-pointer" onClick={()=>{router.push("/signin")}}>
+            <InteractiveHoverButtonDemo/>
       </div>
       {/* <div className="text-yellow-400">Register</div> */}
 
   </div>
+}
+
+export function InteractiveHoverButtonDemo() {
+  return <InteractiveHoverButton className="text-[1rem] rounded-lg">Sign in</InteractiveHoverButton>;
 }

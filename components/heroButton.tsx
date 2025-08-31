@@ -9,7 +9,7 @@ export function HoverBorderGradientDemo() {
       <HoverBorderGradient
         containerClassName="rounded-full cursor-pointer text-xl "
         as="button"
-        className="bg-white text-black dark:text-white flex items-center space-x-2"
+        className="bg-white text-black font-semibold dark:text-white flex items-center space-x-2"
       >
         <span>Get Started</span>
         {/* <AceternityLogo /> */}
