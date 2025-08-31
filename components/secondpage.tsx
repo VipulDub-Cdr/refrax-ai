@@ -56,7 +56,7 @@ export default function SecondPage() {
 
         <div className='mx-7 my-4 lg:mx-5 lg:my-6'><BigCardVideoRight url="" heading="Personalized Code Formatting" description='Refrax AI intelligently adapts to your coding style, allowing you to prioritize either closely following your personal patterns or adhering to best coding practices.' /></div>
 
-        <div className='mx-7 my-4 lg:mx-5 lg:my-6'><BigCardImageLeft url="/responsive.png" heading="Simplistic Responsive Interface" description='Experience a clean, intuitive, and fully responsive user interface designed for developers. Refrax AI makes it effortless to upload files, view transformations, and interact with results across devices.' /></div>
+        <div className='mx-7 my-4 lg:mx-5 lg:my-6'><BigCardImageLeft url="/mobileView.jpg" heading="Simplistic Responsive Interface" description='Experience a clean, intuitive, and fully responsive user interface designed for developers. Refrax AI makes it effortless to upload files, view transformations, and interact with results across devices.' /></div>
 
         <div className='mx-7 my-4 lg:mx-5 lg:my-6'><BigCardImageRight url="/multiModel.png" heading="Smart Code Analysis (Coming Soon)" description='Powered by advanced multi-model analysis, Refrax AI processes your code and report to produce cost-effective, high-quality formatting solutions.' /></div>
 
@@ -145,7 +145,7 @@ const BigCardImageLeft: React.FC<MyComponentProps> = ({ url, heading, descriptio
                 <div className='overflow-hidden relative mt-10 md:mt-0 h-[20vh] w-[55vw] md:h-[55vh] md:w-[25vw] bg-neutral-700 rounded-t-4xl border-10 border-neutral-800 border-b-0 flex flex-col items-center justfy-start'>
                     <div className='absolute top-0 left-[40%] md:left-25 z-900 my-3 md:my-2 w-[20%] md:w-[40%] md:h-[7%] bg-neutral-800 rounded-full py-2'>
                     </div>
-                    <Image width={1000} height={1000} src={"/mobileView.jpg"} alt={url} className="" />
+                    <Image width={1000} height={1000} src={url} alt={url} className="" />
 
                 </div>
             </div>
