@@ -42,7 +42,7 @@ export default function SecondPage() {
         </div>
 
         <div className="w-full mt-10 md:mt-20">
-            <div className='my-2 p-1 flex flex-col justify-center items-center text-[2rem]/6 md:text-[2.6rem]/7 font-normal gap-5 lg:my-6'>
+            <div className='my-2 p-1 flex flex-col justify-center items-center text-[2rem]/6 md:text-[2.6rem]/7 font-normal gap-3 lg:my-6'>
                 Code Formatted in Your
                 <div className='text-blacks p-3 rounded-2xl'>Unique Style</div>
             </div>
@@ -54,7 +54,7 @@ export default function SecondPage() {
 
 
 
-        <div className='mx-7 my-4 lg:mx-5 lg:my-6'><BigCardVideoRight url="" heading="Personalized Code Formatting" description='Refrax AI intelligently adapts to your coding style, allowing you to prioritize either closely following your personal patterns or adhering to best coding practices.' /></div>
+        <div className='mx-7 my-4 lg:mx-5 lg:my-6'><BigCardImageRight1 url="/working.png" heading="Personalized Code Formatting" description='Refrax AI intelligently adapts to your coding style, allowing you to prioritize either closely following your personal patterns or adhering to best coding practices.' /></div>
 
         <div className='mx-7 my-4 lg:mx-5 lg:my-6'><BigCardImageLeft url="/mobileView.jpg" heading="Simplistic Responsive Interface" description='Experience a clean, intuitive, and fully responsive user interface designed for developers. Refrax AI makes it effortless to upload files, view transformations, and interact with results across devices.' /></div>
 
@@ -143,7 +143,7 @@ const BigCardImageLeft: React.FC<MyComponentProps> = ({ url, heading, descriptio
             {/* <Image width={1000} height={1000} src={url} alt={url} className="w-full h-full object-cover rounded-2xl bg-amber-50 shadow-md" /> */}
             <div className='w-full h-full rounded-2xl bg-gradient-to-r from-stone-400 to-stone-500 inset-shadow-sm/60 inset-shadow-zinc-600 flex flex-col justify-end items-center'>
                 <div className='overflow-hidden relative mt-10 md:mt-0 h-[20vh] w-[55vw] md:h-[55vh] md:w-[25vw] bg-neutral-700 rounded-t-4xl border-10 border-neutral-800 border-b-0 flex flex-col items-center justfy-start'>
-                    <div className='absolute top-0 left-[40%] md:left-25 z-900 my-3 md:my-2 w-[20%] md:w-[40%] md:h-[7%] bg-neutral-800 rounded-full py-2'>
+                    <div className='absolute top-0 left-[40%] md:left-25 z-900 my-3 md:my-3 w-[20%] md:w-[40%] md:h-[7%] bg-neutral-800 rounded-full py-2'>
                     </div>
                     <Image width={1000} height={1000} src={url} alt={url} className="" />
 
@@ -155,6 +155,40 @@ const BigCardImageLeft: React.FC<MyComponentProps> = ({ url, heading, descriptio
                 <div className="text-gray-800 md:w-[60%]">{description}</div>
 
                 <button className="rounded-lg px-4 py-1 text-white font-medium bg-black my-1 hover:cursor-pointer hover:bg-white hover:text-black hover:border-1 hover:border-black" onClick={() => { router.push("/signin") }}>
+                    Try for free
+                </button>
+
+            </div>
+        </div>
+
+
+
+    )
+}
+
+const BigCardImageRight1: React.FC<MyComponentProps> = ({ url, heading, description }) => {
+
+    const router = useRouter();
+
+    return (
+
+        <div className='w-full h-full lg:h-[65vh] rounded-2xl flex flex-col lg:flex-row-reverse justify-start items-start gap-3  bg-[#F4F4F4]'>
+            
+            <div className='flex flex-row justify-center items-center h-full w-full p-4 md:p-20 bg-gradient-to-r from-neutral-500 to-neutral-600 rounded-3xl'>
+
+                <div className='w-full h-full border-10 border-neutral-700 rounded-3xl shadow-xl/40 shadow-neutral-800 overflow-hidden transition-all delay-100 duration-400 hover:scale-150 hover:-translate-x-80 hover:-translate-y-40'>
+                    <Image width={1000} height={1000} src={url} alt={url} className="w-full h-full" />
+                </div>
+
+            </div>
+            
+
+            <div className='lg:mx-15 lg:w-full lg:h-full flex flex-col justify-start items-start gap-2 lg:gap-3 my-1 lg:my-0 md:justify-center md:items-start px-1 lg:px-0'>
+                <div className="text-[1.6rem]/7 md:text-[2rem]/7 tracking-tight line opacity-95 text-wrap font-sans">{heading}</div>
+
+                <div className="text-gray-800 md:w-[60%]">{description}</div>
+
+                <button className="rounded-lg md:rounded-lg px-4 py-1 text-white font-medium bg-black my-1 hover:cursor-pointer hover:bg-white hover:text-black hover:border-1 hover:border-black" onClick={() => { router.push("/signin") }}>
                     Try for free
                 </button>
 
