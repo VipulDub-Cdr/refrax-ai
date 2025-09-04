@@ -70,7 +70,10 @@ const BigCardImageRight: React.FC<MyComponentProps> = ({ url, heading, descripti
     return (
 
         <div className='w-full h-full lg:h-[65vh] rounded-2xl flex flex-col lg:flex-row-reverse justify-start items-start gap-3  bg-[#F4F4F4]'>
-            <Image width={1000} height={1000} src={url} alt={url} className="w-full h-full object-cover rounded-2xl bg-amber-50 border-2 md:border-l-0 border-neutral-200" />
+
+            <div className='w-full h-full border-5 border-neutral-100 rounded-3xl'>
+                <Image width={1000} height={1000} src={url} alt={url} className="w-full h-full object-cover rounded-2xl bg-amber-50 border-2 md:border-l-0 border-neutral-200" />
+            </div>
 
             <div className='lg:mx-15 lg:w-full lg:h-full flex flex-col justify-start items-start gap-2 lg:gap-3 my-1 lg:my-0 md:justify-center md:items-start px-1 lg:px-0'>
                 <div className="text-[1.6rem]/7 md:text-[2rem]/7 tracking-tight line opacity-95 text-wrap font-sans">{heading}</div>
