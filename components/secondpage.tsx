@@ -146,7 +146,7 @@ const BigCardImageLeft: React.FC<MyComponentProps> = ({ url, heading, descriptio
             {/* <Image width={1000} height={1000} src={url} alt={url} className="w-full h-full object-cover rounded-2xl bg-amber-50 shadow-md" /> */}
             <div className='w-full h-full rounded-2xl bg-gradient-to-r from-stone-400 to-stone-500 inset-shadow-sm/60 inset-shadow-zinc-600 flex flex-col justify-end items-center'>
                 <div className='overflow-hidden relative mt-10 md:mt-0 h-[20vh] w-[55vw] md:h-[55vh] md:w-[25vw] bg-neutral-700 rounded-t-4xl border-10 border-neutral-800 border-b-0 flex flex-col items-center justfy-start'>
-                    <div className='absolute top-0 left-[40%] md:left-25 z-900 my-3 md:my-3 w-[20%] md:w-[40%] md:h-[7%] bg-neutral-800 rounded-full py-2'>
+                    <div className='absolute top-0 left-[40%] md:left-3 z-900 my-3 md:my-3 w-[20%] md:w-[7%] md:h-[6%] bg-neutral-800 rounded-full py-2'>
                     </div>
                     <Image width={1000} height={1000} src={url} alt={url} className="" />
 
@@ -179,7 +179,7 @@ const BigCardImageRight1: React.FC<MyComponentProps> = ({ url, heading, descript
             
             <div className='flex flex-row justify-center items-center h-full w-full p-4 md:p-20 bg-gradient-to-r from-neutral-500 to-neutral-600 rounded-3xl'>
 
-                <div className='w-full h-full border-10 border-neutral-700 rounded-3xl shadow-xl/40 shadow-neutral-800 overflow-hidden transition-all delay-100 duration-400 hover:scale-150 hover:-translate-x-80 hover:-translate-y-40'>
+                <div className='w-full h-full border-10 border-neutral-700 rounded-3xl shadow-xl/40 shadow-neutral-800 overflow-hidden transition-all delay-100 duration-400 hover:scale-110'>
                     <Image width={1000} height={1000} src={url} alt={url} className="w-full h-full" />
                 </div>
 
