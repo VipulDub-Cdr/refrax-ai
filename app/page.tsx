@@ -24,7 +24,7 @@ export default function Home() {
 
       <SecondPage/>
       
-      <div className="h-screen w-screen md:flex justify-center items-center hidden bg-neutral-200">
+      <div className="h-screen w-screen md:flex justify-center items-center hidden">
         <BentoGrid/>
       </div>
 
