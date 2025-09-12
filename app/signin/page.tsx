@@ -21,7 +21,7 @@ export default function SignInPage() {
                     <img className="h-10 w-10 " src="https://img.icons8.com/?size=100&id=JvOSspDsPpwP&format=png&color=000000" alt="" />
                     <div>Google</div>
                 </button> */}
-                <button className="text-white mb-2 hover:cursor-pointer hover:text-neutral-300">Login as Guest (coming soon)</button>
+                {/* <button className="text-white mb-2 hover:cursor-pointer hover:text-neutral-300">Login as Guest (coming soon)</button> */}
             </div>
         </div>
     )

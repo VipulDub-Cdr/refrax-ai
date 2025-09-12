@@ -26,7 +26,7 @@ export default function SecondPage() {
 
         <div className='flex flex-col justify-center items-center h-[50vh] w-[100vw] md:h-full md:w-[75vw] p-6 md:p-10 rounded-3xl'>
 
-                <div className='w-full h-full border-10 md:border-12 border-neutral-800 rounded-3xl bg-black md:mt-2 shadow-xl/20 shadow-neutral-800'>
+                <div className='ring-5 ring-neutral-400 w-full h-full border-10 md:border-12 border-neutral-800 rounded-3xl bg-black md:mt-2 shadow-xl/20 shadow-neutral-800'>
                     <video ref={videoRef} autoPlay loop muted playsInline className="h-full w-full rounded-3xl shadow-lg object-cover">
                         <source src="/demoVideo1.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
@@ -58,7 +58,8 @@ export default function SecondPage() {
 
         <div className='mx-7 my-4 lg:mx-5 lg:my-6'><BigCardImageLeft url="/mobileView.jpg" heading="Simplistic Responsive Interface" description='Experience a clean, intuitive, and fully responsive user interface designed for developers. Refrax AI makes it effortless to upload files, view transformations, and interact with results across devices.' /></div>
 
-        <div className='mx-7 my-4 lg:mx-5 lg:my-6'><BigCardImageRight url="/multiModel.png" heading="Smart Code Analysis (Coming Soon)" description='Powered by advanced multi-model analysis, Refrax AI processes your code and report to produce cost-effective, high-quality formatting solutions.' /></div>
+        {/* <div className='mx-7 my-4 lg:mx-5 lg:my-6'><BigCardImageRight url="/multiModel.png" heading="Smart Code Analysis (Coming Soon)" description='Powered by advanced multi-model analysis, Refrax AI processes your code and report to produce cost-effective, high-quality formatting solutions.' /></div> */}
+        
 
     </div>
 }
