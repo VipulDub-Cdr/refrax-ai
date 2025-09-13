@@ -8,14 +8,14 @@ interface MyComponentProps {
 
 export default function Thirdpage() {
 
-    return <div id="third-page" className="md:pt-8 h-full w-full flex flex-col justify-center items-center md:justify-start">
+    return <div id="third-page" className="md:pt-8 h-screen w-full flex flex-col justify-center items-center md:justify-start bg-neutral-100">
 
         <div className='w-full md:w-[60%] flex flex-col justify-start items-center my-4'>
-            <div className='text-xl text-stone-900 font-medium'>Impact of Refrax AI</div>
+            <div className='text-xl text-stone-900 font-medium'><span className='text-orange-500'>Impact</span> of Refrax AI</div>
             <div className=' text-3xl md:text-[2.6rem] text-center'> Effortlessly Formats Your Code to Match Your Unique Style with AI</div>
         </div>
 
-        <div id="third-page" className='w-full bg-gradient-to-r from-neutral-400 to-stone-500 my-4'>
+        <div id="third-page" className='w-full my-4'>
             <Marquee direction="left" className="w-full flex flex-row justify-between items-center p-2 gap-2 md:gap-4 md:p-6 my-2">
                 <HeroCard url="" heading="120%" description='Increased code consistency across projects' />
                 <HeroCard url="" heading="70%" description='Faster onboarding for new developers' />
@@ -37,7 +37,7 @@ export default function Thirdpage() {
 }
 
 const HeroCard: React.FC<MyComponentProps> = ({heading, description }) => {
-    return <div className='bg-white w-40 h-25 p-2 md:px-4 md:h-40 md:w-80 shadow-lg hover:bg-neutral-700 hover:text-white rounded-xl mx-4 md:mx-9 flex flex-col justify-center items-start transition-colors delay-50 duration-200'>
+    return <div className='bg-white w-40 h-25 p-2 md:px-4 md:h-45 md:w-90 shadow-lg hover:bg-neutral-700 hover:text-white rounded-xl mx-4 md:mx-9 flex flex-col justify-center items-start transition-colors delay-50 duration-200'>
         <div className='text-2xl md:text-[2.5rem] font-bold'>{heading}</div>
         <div className='text-[0.8rem] md:text-[1.2rem] font-light'>{description}</div>
     </div>
