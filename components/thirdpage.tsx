@@ -8,7 +8,7 @@ interface MyComponentProps {
 
 export default function Thirdpage() {
 
-    return <div id="third-page" className="md:pt-8 h-screen w-full flex flex-col justify-center items-center md:justify-start bg-neutral-100">
+    return <div id="third-page" className="md:pt-8 h-screen w-full flex flex-col justify-center items-center md:justify-start bg-neutral-200">
 
         <div className='w-full md:w-[60%] flex flex-col justify-start items-center my-4'>
             <div className='text-xl text-stone-900 font-medium'><span className='text-orange-500'>Impact</span> of Refrax AI</div>
