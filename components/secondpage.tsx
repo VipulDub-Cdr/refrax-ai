@@ -60,6 +60,11 @@ export default function SecondPage() {
 
         {/* <div className='mx-7 my-4 lg:mx-5 lg:my-6'><BigCardImageRight url="/multiModel.png" heading="Smart Code Analysis (Coming Soon)" description='Powered by advanced multi-model analysis, Refrax AI processes your code and report to produce cost-effective, high-quality formatting solutions.' /></div> */}
         
+        <div className='w-screen h-screen p-[10%] flex-col justify-center items-center gap-2'>
+            <div className='text-[2rem] md:text-[3rem] font-medium text-center bg-radial-[at_25%_70%] from-neutral-700 via-zinc-500 to-stone-800 bg-clip-text text-transparent'>"ReFrax AI has completely changed how I format code. My personal style stays intact while clutter disappears. Every snippet feels truly mine."</div>
+            <div className='text-[1.5rem] text-center font-semibold pt-8'>Vipul Dubey</div>
+            <div className='text-neutral-700 font-semibold text-center text-[1.7rem]'>Founder // Refrax AI</div>
+        </div>
 
     </div>
 }
@@ -178,7 +183,7 @@ const BigCardImageRight1: React.FC<MyComponentProps> = ({ url, heading, descript
 
         <div className='w-full h-full lg:h-[65vh] rounded-2xl flex flex-col lg:flex-row-reverse justify-start items-start gap-3  bg-[#F4F4F4]'>
             
-            <div className='flex flex-row justify-center items-center h-full w-full md:w-[55%] p-4 md:p-20 bg-gradient-to-r from-neutral-500 to-neutral-600 rounded-3xl'>
+            <div className='flex flex-row justify-center items-center h-full w-full md:w-[55%] p-4 md:p-20 bg-radial-[at_50%_50%] from-neutral-500 to-neutral-600 rounded-3xl inset-shadow-sm inset-shadow-neutral-700'>
 
                 <div className='w-full h-full border-10 border-neutral-700 rounded-3xl shadow-xl/40 shadow-neutral-800 overflow-hidden transition-all delay-100 duration-400 hover:scale-110'>
                     <Image width={1000} height={1000} src={url} alt={url} className="w-full h-full" />

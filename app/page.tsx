@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 import Thirdpage from '@/components/thirdpage';
 import Fourthpage from '@/components/fourthpage';
 import Footer from "@/components/footer";
-import { BentoGrid } from "@/components/BentoGrid";
+import Premium from "@/components/premium"
 
 export default function Home() {
 
@@ -29,7 +29,8 @@ export default function Home() {
       </div> */}
 
       <Thirdpage/>
-      
+
+      <Premium/>
 
       <Fourthpage/>
 
