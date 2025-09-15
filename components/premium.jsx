@@ -2,7 +2,7 @@ export default function Premium() {
     return <div className="relative w-screen h-screen flex flex-col justify-start items-center p-4 gap-2 md:mb-0 mb-10">
         <div className="absolute top-[2%] hidden md:flex md:left-[10%] h-80 w-80 z-[-20] rounded-full bg-purple-200 -rotate-x-20 rotate-y-30"></div>
         <div className="absolute top-[80%] left-0 md:left-[20%] h-34 w-34 z-[-20] rounded-full bg-blue-200 rotate-x-20 rotate-y-30"></div>
-        <div className="absolute top-[2%] left-[64%] h-120 w-120 z-[-20] rounded-full bg-blue-200 rotate-x-20 rotate-y-30"></div>
+        <div className="hidden md:flex absolute top-[2%] left-[64%] h-120 w-120 z-[-20] rounded-full bg-blue-200 rotate-x-20 rotate-y-30"></div>
         <div className="text-3xl text-center md:text-[2.5rem] md:pt-[5%] font-semibold">The right plan can change your work life</div>
         <div className="text-lg/6 text-neutral-400 text-center md:px-[30%]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptatum repellat?</div>
         <div className="w-full h-full flex flex-col justify-center items-center md:flex-row md:px-[25%]">
