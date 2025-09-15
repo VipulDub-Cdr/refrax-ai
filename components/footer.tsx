@@ -2,7 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 
 export default function Footer() {
-    return (<div className="h-[30vh] w-[100vw] bg-[#F17144} text-neutral-800 md:mt-15 border-t-2 rounded-t-2xl bg-neutral-200 border-neutral-200">
+    return (<div className="h-[30vh] w-[100vw] bg-[#F17144} text-neutral-200 md:mt-15 border-t-2 bg-neutral-800 border-neutral-200">
 
         <div className="flex flex-row h-full p-2">
 

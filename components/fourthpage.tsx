@@ -9,12 +9,13 @@ export default function Fourthpage() {
     return (
         <div id="fourth-page" className="w-screen h-[100%] md:mt-[5%]">
 
-            <div className="text-[3.2rem] px-2 md:ml-7">FAQs</div>
+            <div className="text-[2rem]/10 text-center md:text-[3.2rem] px-2 md:ml-7 flex flex-row justify-center items-center font-bold">Frequently Asked Questions</div>
+            <div className="text-[1.2rem] text-neutral-600 px-2 md:ml-7 flex flex-row justify-center items-center text-center md:pt-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do</div>
 
             <Accordion
                 type="single"
                 collapsible
-                className="w-screen"
+                className="w-screen flex flex-col justify-center items-center mt-4"
                 defaultValue="item-1"
             >
                 <AccordionItem value="item-1">

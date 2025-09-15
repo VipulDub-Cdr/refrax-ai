@@ -28,7 +28,7 @@ export default function Home() {
         <BentoGrid/>
       </div> */}
 
-      <Thirdpage/>
+      <Thirdpage/> 
 
       <Premium/>
 

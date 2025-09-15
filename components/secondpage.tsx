@@ -42,9 +42,9 @@ export default function SecondPage() {
         </div>
 
         <div className="w-full mt-10 md:mt-20">
-            <div className='my-2 p-1 flex flex-col justify-center items-center text-[2rem]/6 md:text-[2.6rem]/7 font-normal gap-3 lg:my-6'>
+            <div className='my-2 p-1 flex flex-col justify-center items-center text-[2rem]/6 md:text-[2.6rem]/7 gap-3 lg:my-6 font-semibold'>
                 Code Formatted in Your
-                <div className='text-blacks p-3 rounded-2xl'>Unique Style</div>
+                <div className='text-blacks p-3 rounded-2xl font-semibold'>Unique Style</div>
             </div>
 
             <div className='my-2 md:pl-10 lg:pl-0 w-full flex flex-row justify-center items-center lg:ml-0'>
@@ -60,10 +60,10 @@ export default function SecondPage() {
 
         {/* <div className='mx-7 my-4 lg:mx-5 lg:my-6'><BigCardImageRight url="/multiModel.png" heading="Smart Code Analysis (Coming Soon)" description='Powered by advanced multi-model analysis, Refrax AI processes your code and report to produce cost-effective, high-quality formatting solutions.' /></div> */}
         
-        <div className='w-screen h-screen p-[10%] flex-col justify-center items-center gap-2'>
-            <div className='text-[2rem] md:text-[3rem] font-medium text-center bg-radial-[at_25%_70%] from-neutral-700 via-zinc-500 to-stone-800 bg-clip-text text-transparent'>{"ReFrax AI has completely changed how I format code. My personal style stays intact while clutter disappears. Every snippet feels truly mine."}</div>
-            <div className='text-[1.5rem] text-center font-semibold pt-8'>Vipul Dubey</div>
-            <div className='text-neutral-700 font-semibold text-center text-[1.7rem]'>Founder // Refrax AI</div>
+        <div className='w-screen h-screen p-[10%] flex-col justify-center items-center gap-2 bg-gradient-to-b from-neutral-200 to-white'>
+            <div className='text-[2rem] md:text-[3rem] font-medium text-center text-neutral-800'>{"ReFrax AI has completely changed how I format code. My personal style stays intact while clutter disappears. Every snippet feels truly mine."}</div>
+            <div className='text-[1.5rem] text-center font-semibold pt-8 text-neutral-700'>Vipul Dubey</div>
+            <div className='text-neutral-700 font-bold text-center text-[1.7rem]'>Founder // Refrax AI</div>
         </div>
 
     </div>
