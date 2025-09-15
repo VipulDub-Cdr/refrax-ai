@@ -60,7 +60,7 @@ export default function SecondPage() {
 
         {/* <div className='mx-7 my-4 lg:mx-5 lg:my-6'><BigCardImageRight url="/multiModel.png" heading="Smart Code Analysis (Coming Soon)" description='Powered by advanced multi-model analysis, Refrax AI processes your code and report to produce cost-effective, high-quality formatting solutions.' /></div> */}
         
-        <div className='w-screen h-screen p-[10%] flex-col justify-center items-center gap-2 bg-gradient-to-b from-neutral-200 to-white'>
+        <div className='w-screen h-screen p-[10%] md:pt-[12%] flex-col justify-center items-center gap-2'>
             <div className='text-[2rem] md:text-[3rem] font-medium text-center text-neutral-800'>{"ReFrax AI has completely changed how I format code. My personal style stays intact while clutter disappears. Every snippet feels truly mine."}</div>
             <div className='text-[1.5rem] text-center font-semibold pt-8 text-neutral-700'>Vipul Dubey</div>
             <div className='text-neutral-700 font-bold text-center text-[1.7rem]'>Founder // Refrax AI</div>
