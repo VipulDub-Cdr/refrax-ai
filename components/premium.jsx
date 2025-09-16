@@ -3,7 +3,7 @@ export default function Premium() {
         {/* <div className="absolute top-[2%] hidden md:flex md:left-[10%] h-80 w-80 z-[-20] rounded-full bg-purple-200 -rotate-x-20 rotate-y-30"></div>
         <div className="absolute top-[80%] left-0 md:left-[20%] h-34 w-34 z-[-20] rounded-full bg-blue-200 rotate-x-20 rotate-y-30"></div>
         <div className="hidden md:flex absolute top-[2%] left-[64%] h-120 w-120 z-[-20] rounded-full bg-blue-200 rotate-x-20 rotate-y-30"></div> */}
-        <div className="text-3xl text-center md:text-[2.5rem] md:pt-[5%] font-semibold">The right plan can change your work life</div>
+        <div className="text-3xl text-center md:text-[2.5rem] pt-[8%] md:pt-[5%] font-semibold">The right plan can change your work life</div>
         <div className="text-lg/6 text-neutral-400 text-center md:px-[30%]">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque voluptatum repellat?</div>
         <div className="w-full h-full flex flex-col justify-center items-center md:flex-row md:px-[15%]">
             <div className="flex flex-col m-4 justify-start items-center h-[80%] w-[85%] border-4 rounded-xl shadow-xl hover:border-neutral-400 transition-colors delay-100 duration-200">
@@ -18,19 +18,19 @@ export default function Premium() {
                     </div>
                     <div className="flex flex-row gap-2">
                         <img className=" h-6 w-6" src="https://img.icons8.com/?size=100&id=pzHMd4OWQnT1&format=png&color=000000" alt="" />
-                        <div className="text-[1rem] text-neutral-800">Lorem ipsum dolor sit.</div>
+                        <div className="text-[1rem] text-neutral-800">Limited sample uploads</div>
                     </div>
                     <div className="flex flex-row gap-2">
                         <img className=" h-6 w-6" src="https://img.icons8.com/?size=100&id=pzHMd4OWQnT1&format=png&color=000000" alt="" />
-                        <div className="text-[1rem] text-neutral-800">Lorem ipsum dolor sit.</div>
+                        <div className="text-[1rem] text-neutral-800">10 Code analysis per day</div>
                     </div>
                     <div className="flex flex-row gap-2">
                         <img className=" h-6 w-6" src="https://img.icons8.com/?size=100&id=pzHMd4OWQnT1&format=png&color=000000" alt="" />
-                        <div className="text-[1rem] text-neutral-800">Lorem ipsum dolor sit.</div>
+                        <div className="text-[1rem] text-neutral-800">Knowledge Mode</div>
                     </div>
                     <div className="flex flex-row gap-2">
                         <img className=" h-6 w-6" src="https://img.icons8.com/?size=100&id=pzHMd4OWQnT1&format=png&color=000000" alt="" />
-                        <div className="text-[1rem] text-neutral-800">Lorem ipsum dolor sit.</div>
+                        <div className="text-[1rem] text-neutral-800">Pattern Oriented Mode</div>
                     </div>
                 </div>
             </div>
@@ -46,19 +46,19 @@ export default function Premium() {
                     </div>
                     <div className="flex flex-row gap-2">
                         <img className=" h-6 w-6" src="https://img.icons8.com/?size=100&id=pzHMd4OWQnT1&format=png&color=000000" alt="" />
-                        <div className="text-[1rem] text-neutral-800">Lorem ipsum dolor sit.</div>
+                        <div className="text-[1rem] text-neutral-800">Expanded sample uploads</div>
                     </div>
                     <div className="flex flex-row gap-2">
                         <img className=" h-6 w-6" src="https://img.icons8.com/?size=100&id=pzHMd4OWQnT1&format=png&color=000000" alt="" />
-                        <div className="text-[1rem] text-neutral-800">Lorem ipsum dolor sit.</div>
+                        <div className="text-[1rem] text-neutral-800">Expanded Code analysis</div>
                     </div>
                     <div className="flex flex-row gap-2">
                         <img className=" h-6 w-6" src="https://img.icons8.com/?size=100&id=pzHMd4OWQnT1&format=png&color=000000" alt="" />
-                        <div className="text-[1rem] text-neutral-800">Lorem ipsum dolor sit.</div>
+                        <div className="text-[1rem] text-neutral-800">Pattern Oriented Mode</div>
                     </div>
                     <div className="flex flex-row gap-2">
                         <img className=" h-6 w-6" src="https://img.icons8.com/?size=100&id=pzHMd4OWQnT1&format=png&color=000000" alt="" />
-                        <div className="text-[1rem] text-neutral-800">Lorem ipsum dolor sit.</div>
+                        <div className="text-[1rem] text-neutral-800">Knowledge mode</div>
                     </div>
                     
                 </div>

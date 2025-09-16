@@ -46,7 +46,7 @@ export function Navbar(){
 
   const router = useRouter();
   //   rounded-3xl shadow-[#cacfe2] shadow-md 
-  return <div className="w-full top-0 right-0 pl-3 md:px-4 py-2 flex flex-row justify-between items-center text-[1.2rem] bg-white/40 backdrop-blur-xl "> 
+  return <div className="w-full top-0 right-0 pl-3 md:px-4 py-2 flex flex-row justify-between items-center text-[1.2rem] bg-white/30 backdrop-blur-xl "> 
     
     <div className="flex flex-row justify-between items-center gap-3">
       {/* <div className="border-2 border-gray-300 rounded-2xl px-4 py-3"></div> */}
