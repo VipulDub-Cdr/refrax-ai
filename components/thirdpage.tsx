@@ -19,7 +19,7 @@ export default function Thirdpage() {
                     `,
             }}
             >
-                <div className=' text-white/30 font-semibold text-[2rem] animate-pulse text-center'>Your Vibe coded program reflects that</div>
+                <div className=' text-white/30 font-semibold text-[1.8rem]/10 md:text-[2rem] animate-pulse text-center'>Your Vibe coded program reflects that</div>
             </div>
             <div className='w-full md:w-3/7 h-full border-2 border-neutral-800 mx-3 rounded-sm flex flex-row justify-center items-center' style={{
                 backgroundImage: `
@@ -28,7 +28,7 @@ export default function Thirdpage() {
                 radial-gradient(circle at 50% 0%, rgba(181, 184, 208, 0.3) 0%, transparent 80%)
                 `,
             }}>
-                <div className=' text-white/30 font-semibold text-[2rem] animate-pulse'>Reflects You</div>
+                <div className=' text-white/30 font-semibold text-[2rem]/10 md:text-[2rem] animate-pulse'>Reflects You</div>
             </div>
         </div>
         <div className='hidden px-[8.8%] w-full h-1/4 md:flex justify-center items-center my-4'>

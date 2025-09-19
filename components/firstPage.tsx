@@ -23,7 +23,7 @@ export default function Firstpage() {
             }}
             />
 
-            <div className="h-[30%] mt-14 px-2 md:px-0 md:mt-0  flex flex-col md:flex-row  justify-start items-start pt-[8%] md:mx-44 gap-2">
+            <div className="h-[30%] mt-14 px-2 md:px-0 md:mt-0 flex flex-col md:flex-row  justify-start items-start pt-[8%] md:mx-44 gap-2">
                 <div className="flex flex-col gap-2">
                     <div className="border-2 border-neutral-800 rounded-3xl z-10 w-[85%] md:w-[34%] flex flex-row items-center justify-start inset-shadow-sm inset-shadow-white/10 backdrop-blur-lg">
                         <div className="m-1 px-1 bg-neutral-800 rounded-3xl text-neutral-200 text-sm">{`What's new?`}</div>
