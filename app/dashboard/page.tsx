@@ -139,7 +139,7 @@ export default function Dashboard() {
     return (
 
 
-        <div className={`h-[100vh] w-[100vw] relative`}>
+        <div className={`h-[100vh] w-[100vw] relative bg-black`}>
 
 
                 <div className="absolute top-0 left-0 w-full h-full z-0">
@@ -313,9 +313,9 @@ export default function Dashboard() {
 
                 </div> :
 
-                <div>
+                <div className="bg-black text-white text-center">
 
-                    session is not there
+                   Please Login First
 
                 </div>}
 
