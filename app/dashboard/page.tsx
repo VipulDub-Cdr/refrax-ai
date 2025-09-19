@@ -6,6 +6,8 @@ import { TypingAnimation } from "@/components/magicui/typing-animation";
 import { ChangeEvent } from "react";
 import { Skeleton } from "@/components/ui/skeleton"
 import Image from "next/image";
+import DarkVeil from '@/components/DarkVeil';
+
 
 export default function Dashboard() {
     const { data: session, status } = useSession();
@@ -137,16 +139,19 @@ export default function Dashboard() {
     return (
 
 
-        <div className={`bg-[#0A0A0A] h-[100vh] w-[100vw]`}>
+        <div className={`h-[100vh] w-[100vw] relative`}>
 
 
-            { session ?
-                //  absolute top-0 left-[26%] md:left-[6.5%] 
+                <div className="absolute top-0 left-0 w-full h-full z-0">
+                    <DarkVeil/>
+                </div>
 
-                <div className={`w-full h-full text-white flex flex-row justify-between items-center`}>
+                {/* absolute top-0 left-[26%] md:left-[6.5%]  */}
+
+                {session ? <div className={`w-full h-full text-white flex flex-row justify-between items-center z-10`}>
 
                     {
-                        help && <div className="absolute left-[5%] pt-2 px-4 h-[55%] w-[90%] border-2 border-neutral-900 rounded-xl flex flex-col justify-around gap-2 bg-[#0A0A0A] md:bottom-0 md:left-0 md:w-[22%] md:m-4">
+                       <div className={`opacity-0 ${help ? " opacity-100 " : " opacity-0 "} transition-opacity delay-100 duration-300 absolute left-[5%] pt-2 px-4 h-[55%] w-[90%] border-2 border-neutral-900 rounded-xl flex flex-col justify-around gap-2 bg-[#0A0A0A]/60 md:bottom-0 md:left-0 md:w-[22%] md:m-4`}>
                             <div className="font-semibold text-xl">Getting Started</div>
                             <div className="font-medium text-[1.05rem]">Follow these steps: </div>
                             <div className="flex flex-col px-3 h-full w-full gap-2 md:py-3">
@@ -173,7 +178,7 @@ export default function Dashboard() {
 
                     }
 
-                    <div className="absolute top-0 left-0 flex flex-row justify-start">
+                    <div className="absolute top-0 left-0 flex flex-row justify-start z-10">
                         <button
                             type="button"
                             className="m-2 border-1 border-gray-700 rounded-lg px-4 py-1 text-[0.9rem] cursor-pointer hover:bg-neutral-800 transition-colors delay-50 duration-150hover:cursor-pointer"
@@ -185,24 +190,24 @@ export default function Dashboard() {
                         <button
                             type="button"
                             onClick={() => { setHelp(!help) }}
-                            className="m-2 border-1 border-green-800 bg-gradient-to-b from-[#40b663] to-[#0a9877] rounded-lg px-4 py-1 text-[0.9rem] cursor-pointer hover:bg-neutral-800 transition-colors delay-50 duration-150hover:cursor-pointer"
+                            className="m-2 border-1 border-neutral-600 rounded-lg px-4 py-1 text-[0.9rem] cursor-pointer hover:bg-black/30 transition-colors delay-50 duration-150hover:cursor-pointer"
                         >
                             Help
                         </button>
 
-                        <button
+                        {/* <button
                             type="button"
                             className="m-2 border-1 border-blue-800 bg-gradient-to-b from-[#297CFF] to-[#165FFC] rounded-lg px-4 py-1 text-[0.9rem] transition-colors delay-50 duration-150"
                         >
                             Upgrade
-                        </button>
+                        </button> */}
 
 
                     </div>
 
-                    <div className="w-full h-[80%] flex flex-col justify-center items-center gap-2">
+                    <div className="w-full h-[80%] flex flex-col justify-center items-center gap-2 z-10">
 
-                        <TypingAnimation className="text-5xl">{`ReFrax AI`}</TypingAnimation>
+                        <TypingAnimation className="text-5xl text-center px-[20%]">{`What should we Generate today?`}</TypingAnimation>
                         <TypingAnimation className="text-lg font-light text-slate-200/80">{`Welcome ${session.user?.name}`}</TypingAnimation>
 
                         {/* <TypingAnimation className="w-[30%] text-lg font-light text-slate-200/80">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque illum cumque natus modi? Vitae, odio! Est quae laborum facere totam alias voluptatum, consectetur hic iusto impedit qui quis, aliquam voluptatibus?</TypingAnimation> */}
@@ -219,7 +224,7 @@ export default function Dashboard() {
                         <div className={`mt-2 w-full flex flex-row justify-center items-center`}>
                             <label
                                 htmlFor="sample-file-upload"
-                                className={`w-[85%] h-full py-[4%] md:w-[30%] md:h-full md:py-[1%] text-center cursor-pointer font-semibold text-[0.8rem] border-1 ${pattern == "" || ultiseedhiSampleFile ? " text-red-400 border-red-400 hover:bg-red-500 hover:text-white" : "text-blue-500 border-blue-300 hover:bg-[#212325] "} rounded-lg shadow-sm transition-colors duration-200`}
+                                className={`w-[85%] h-full py-[4%] md:w-[30%] md:h-full md:py-[1%] text-center cursor-pointer font-semibold text-[0.8rem] border-1 ${pattern == "" || ultiseedhiSampleFile ? " text-red-400 border-red-400 hover:bg-red-500 hover:text-white" : "text-blue-500 border-blue-300 hover:border-blue-600 "} rounded-lg shadow-sm transition-colors duration-200`}
                             >
                                 {ultiseedhiSampleFile == true
                                     ? "File lacks any code" :
@@ -238,7 +243,7 @@ export default function Dashboard() {
                         <div className="my-3 w-full flex flex-row justify-center items-center">
                             <label
                                 htmlFor={pattern === "" || uploadingCode ? undefined : "file-upload"}
-                                className="w-[85%] h-full py-[4%] md:w-[30%] md:h-full md:py-[1%] text-center cursor-pointer bg-[#131415] text-slate-200/80 font-semibold text-[0.8rem] border border-neutral-700 rounded-lg shadow-sm hover:bg-[#2a2c2f] transition-colors duration-200"
+                                className="w-[85%] h-full py-[4%] md:w-[30%] md:h-full md:py-[1%] text-center cursor-pointer bg-neutral-700/10 backdrop-blur-xl text-slate-200/80 font-medium tracking-wide text-[0.8rem] border border-neutral-800 inset-shadow-2xs inset-shadow-neutral-800 rounded-lg shadow-sm hover:border-neutral-600 transition-colors duration-200"
                             >
                                 {!ultiseedhiCode ?
                                     uploadingCode ? "Analyzing...." : `Select the file`
