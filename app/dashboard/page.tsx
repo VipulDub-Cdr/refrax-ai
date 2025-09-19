@@ -207,7 +207,7 @@ export default function Dashboard() {
 
                     <div className="w-full h-[80%] flex flex-col justify-center items-center gap-2 z-10">
 
-                        <TypingAnimation className="text-5xl text-center px-[20%]">{`What should we Generate today?`}</TypingAnimation>
+                        <TypingAnimation className="text-4xl md:text-5xl text-center md:px-[20%]">{`What should we Generate today?`}</TypingAnimation>
                         <TypingAnimation className="text-lg font-light text-slate-200/80">{`Welcome ${session.user?.name}`}</TypingAnimation>
 
                         {/* <TypingAnimation className="w-[30%] text-lg font-light text-slate-200/80">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque illum cumque natus modi? Vitae, odio! Est quae laborum facere totam alias voluptatum, consectetur hic iusto impedit qui quis, aliquam voluptatibus?</TypingAnimation> */}
