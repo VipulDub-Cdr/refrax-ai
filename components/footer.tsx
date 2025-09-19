@@ -2,22 +2,24 @@ import Link from "next/link"
 import Image from "next/image"
 
 export default function Footer() {
-    return (<div className="h-[30vh] w-[100vw] bg-[#F17144} text-neutral-200 md:mt-15 border-t-2 bg-neutral-800 border-neutral-200">
+    return (<div className="h-[40vh] w-[100vw] bg-[#F17144} text-neutral-200 py-10" style={{
+background: "radial-gradient(125% 125% at 50% 10%, #000000 40%, #010133 100%)",
+}}>
 
-        <div className="flex flex-row h-full p-2">
+        <div className="flex flex-row h-full p-2 md:px-[18%]">
 
             <div className="w-full flex flex-col md:flex-row justify-start items-start gap-3 md:gap-10 m-4">
                 <Link href="#first-page">
-                    <button className="cursor-pointer hover:underline hover:underline-offset-2 text-xl font-semibold">Home</button>
+                    <button className="cursor-pointer hover:underline hover:underline-offset-2 text-[1rem] font-semibold">Home</button>
                 </Link>
                 <Link href="#second-page">
-                    <button className="cursor-pointer hover:underline hover:underline-offset-2 text-xl font-semibold">Demo</button>
+                    <button className="cursor-pointer hover:underline hover:underline-offset-2 text-[1rem] font-semibold">Demo</button>
                 </Link>
                 <Link href="#third-page">
-                    <button className="cursor-pointer hover:underline hover:underline-offset-2 text-xl font-semibold">Impact</button>
+                    <button className="cursor-pointer hover:underline hover:underline-offset-2 text-[1rem] font-semibold">Impact</button>
                 </Link>
                 <Link href="#fourth-page">
-                    <button className="cursor-pointer hover:underline hover:underline-offset-2 text-xl font-semibold">FAQs</button>
+                    <button className="cursor-pointer hover:underline hover:underline-offset-2 text-[1rem] font-semibold">FAQs</button>
                 </Link>
             </div>
             <div className="w-full flex flex-col md:flex-row justify-start items-start md:justify-end md:items-start m-4 gap-4">

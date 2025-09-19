@@ -1,92 +1,68 @@
-import {
-    Accordion,
-    AccordionContent,
-    AccordionItem,
-    AccordionTrigger,
-} from "@/components/ui/accordion"
+import Marquee from "react-fast-marquee"
+import { User, UserRound, MoveRight, MoveUpRight, ChartNoAxesCombined } from "lucide-react";
+import { useRouter } from "next/navigation";
 
-export default function Fourthpage() {
+type CardProps = {
+    title: string;
+    description: string;
+};
+
+export default function FourthPage() {
+    const router  = useRouter();
     return (
-        <div id="fourth-page" className="w-screen h-[100%] md:mt-[5%]">
-
-            <div className="text-[2rem]/10 text-center md:text-[3.2rem] px-2 md:ml-7 flex flex-row justify-center items-center font-bold">Frequently Asked Questions</div>
-            <div className="text-[1.2rem] text-neutral-600 px-2 md:ml-7 flex flex-row justify-center items-center text-center md:pt-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do</div>
-
-            <Accordion
-                type="single"
-                collapsible
-                className="w-screen flex flex-col justify-center items-center mt-4"
-                defaultValue="item-1"
-            >
-                <AccordionItem value="item-1">
-                    <AccordionTrigger>What is Refrax AI?</AccordionTrigger>
-                    <AccordionContent className="flex flex-col gap-4 text-balance">
-                        <p>
-                            Refrax AI is an advanced code formatting tool designed to understand and replicate your unique coding style. Unlike traditional formatters that enforce rigid rules, Refrax AI tailors the output to your personal patterns, spacing, indentation, naming conventions, and overall coding style. It ensures your code not only remains logically correct but also consistently aligns with the way you naturally write code.
-                        </p>
-
-                    </AccordionContent>
-                </AccordionItem>
-                <AccordionItem value="item-2">
-                    <AccordionTrigger>How does Refrax AI work?</AccordionTrigger>
-                    <AccordionContent className="flex flex-col gap-4 text-balance">
-                        <p>
-                            Refrax AI operates by analyzing two main inputs: a coding report, which describes how you typically write code, and the actual code content you want formatted. It intelligently compares patterns, spacing, and style preferences from the report, then generates code that mirrors your style closely. It uses advanced multi-model processing to consider multiple formatting possibilities, ensuring the output is as faithful to your style as possible without altering functionality or logic.
-                        </p>
-                    </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="item-3">
-                    <AccordionTrigger>Can Refrax AI follow best coding practices?</AccordionTrigger>
-                    <AccordionContent className="flex flex-col gap-4 text-balance">
-                        <p>
-                            Yes. Refrax AI provides flexibility in prioritization. You can choose to have it focus strictly on replicating your style, or balance style adherence with widely accepted coding best practices. This means you can maintain your personal style while still producing clean, readable, and maintainable code. The AI ensures that logic remains intact and only introduces modifications that improve clarity or adhere to coding conventions when requested.
-                        </p>
-                    </AccordionContent>
-                </AccordionItem>
-
-
-                <AccordionItem value="item-4">
-                    <AccordionTrigger>What types of code can Refrax AI format?</AccordionTrigger>
-                    <AccordionContent className="flex flex-col gap-4 text-balance">
-                        <p>
-                            Refrax AI supports multiple programming languages and file types, provided the content matches the type defined in your coding report. It can process code files like JavaScript, TypeScript, Python, HTML, CSS, and more, depending on the configuration. If the uploaded code does not contain valid code, contains extraneous or unsupported elements, or doesn’t match the expected type, Refrax AI will return a single-word result: “false,” signaling invalid input. This ensures precision and avoids unintended modifications.
-                        </p>
-                    </AccordionContent>
-                </AccordionItem>
-
-
-                <AccordionItem value="item-5">
-                    <AccordionTrigger>Is Refrax AI easy to use?</AccordionTrigger>
-                    <AccordionContent className="flex flex-col gap-4 text-balance">
-                        <p>
-                            Absolutely. Refrax AI is built with a clean, minimalist, and responsive user interface, designed for developers of all skill levels. The process is straightforward: upload your coding report and code file, let the AI analyze and process the data, then preview or download the reformatted code. The UI is fully responsive, working seamlessly across desktops, tablets, and mobile devices, ensuring a smooth experience without overwhelming options or unnecessary complexity.
-                        </p>
-                    </AccordionContent>
-                </AccordionItem>
-
-
-                <AccordionItem value="item-5">
-                    <AccordionTrigger>Will Refrax AI change my code logic?</AccordionTrigger>
-                    <AccordionContent className="flex flex-col gap-4 text-balance">
-                        <p>
-                            No. Refrax AI is designed to preserve the underlying logic and functional behavior of your code. Its focus is on formatting, style consistency, and readability, not altering algorithms or execution. Even when applying best practices or style adjustments, the AI ensures that the code’s original logic, intention, and functional correctness remain intact, giving developers confidence that the output is safe to integrate into existing projects.
-                        </p>
-                    </AccordionContent>
-                </AccordionItem>
-
-
-                <AccordionItem value="item-6">
-                    <AccordionTrigger>Can I use Refrax AI for team coding standards?</AccordionTrigger>
-                    <AccordionContent className="flex flex-col gap-4 text-balance">
-                        <p>
-                            Yes. Refrax AI is ideal for teams looking to maintain consistent coding standards. By providing a shared coding report, team members can have their code automatically formatted according to the agreed-upon style guidelines, while still accommodating individual coding habits when necessary. This ensures uniformity across a project without stifling personal style, making code easier to read, review, and maintain across multiple developers.
-                        </p>
-                    </AccordionContent>
-                </AccordionItem>
-
-            </Accordion>
-
-        </div>
+        <>
+            <div className=" h-full w-screen bg-black flex flex-col md:flex-row pt-[45%] md:pt-0">
+                <div className="w-full md:w-1/3 h-[60%] flex flex-col justify-center items-start p-[5%]">
+                    <div className="text-[2rem]/12 text-white">Why Refrax AI Truly Matters Today.</div>
+                    <div className="py-[8%] text-[1rem] text-neutral-400">The impact of Refrax AI lies in its ability to adapt to individual coding styles, ensuring consistency, personalization, and efficiency in every project.</div>
+                    <div className="font-semibold text-white flex flex-row justify-center gap-2 cursor-pointer" onClick={()=>{router.push("/signin")}}>
+                        <div className="pb-2">Get Started too</div>
+                        <MoveUpRight className="stroke-blue-500 rounded-full rotate-45 hover:rotate-0 transition delay-100 duration-200" />
+                    </div>
+                    <div className="w-full h-[2px] bg-gradient-to-r from-blue-800 via-red-400 to-purple-500"></div>
+                </div>
+                <div className="w-full md:w-2/3 h-[60%] relative">
+                    <div className="hidden md:flex absolute top-0 left-0 h-full w-[30%] bg-gradient-to-r from-black to-black/0 z-10"></div>
+                    <Marquee direction="left" play={true} className="w-full h-[40%] mt-[8%] mb-[4%] md:mb-0">
+                        <div className="flex flex-row">
+                            <Card title="95%" description="Improved team collaboration and coding standard adherence" />
+                            <Card title="70%" description="Faster onboarding for new developers" />
+                            <Card title="120%" description="Increased code consistency on projects" />
+                            <Card title="90%" description="Accuracy in replicating the personal coding style" />
+                            <Card title="60%" description="Reduction in style-related code review comments" />
+                        </div>
+                    </Marquee>
+                    <Marquee direction="right" play={true} className="w-full h-[34%] md:h-[30%] mt-[1%]">
+                        <div className="flex flex-row">
+                            <Card title="95%" description="Improved team collaboration and coding standard adherence" />
+                            <Card title="70%" description="Faster onboarding for new developers" />
+                            <Card title="120%" description="Increased code consistency on projects" />
+                            <Card title="90%" description="Accuracy in replicating the personal coding style" />
+                            <Card title="60%" description="Reduction in style-related code review comments" />
+                        </div>
+                    </Marquee>
+                    {/* <Marquee direction="left" className="h-1/2 w-full flex flex-row justify-center items-center gap-4">
+            </Marquee> */}
+                </div>
+            </div>
+            <div className="hidden md:flex h-full bg-black flex-col justify-center items-center gap-2 pb-[10%]">
+                <div className="text-[1.4rem] tracking-wider text-neutral-400">Built with</div>
+                <div className="flex flex-row justify-center items-center gap-4">
+                    <img className="h-20 w-full" src="https://media2.dev.to/dynamic/image/width=1280,height=720,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fvqwoji22l56hjgsl6woy.jpeg" alt="" />
+                    <img className="h-25 w-full" src="https://camo.githubusercontent.com/c03ad06f344539cb8595630505bcbc2cd7835f7ef829163e8a0cb6eba9f9c524/68747470733a2f2f6431746c7a696664386a646f79342e636c6f756466726f6e742e6e65742f77702d636f6e74656e742f75706c6f6164732f323032322f30322f7461696c77696e646373732d65796563617463682d393630783530342e706e67" alt="" />
+                    <img className="h-26 w-full" src="https://storage.googleapis.com/gweb-uniblog-publish-prod/images/IO24_WhatsInAName_SocialShare_S96SOzG.width-1300.png" alt="" />
+                    <img className="h-8 w-full" src="https://companieslogo.com/img/orig/MDB_BIG.D-96d632a9.png?t=1720244492" alt="" />
+                </div>
+            </div>
+        </>
     )
 }
+
+const Card = ({ title, description }: CardProps) => {
+    return (
+        <div className="w-70 inset-shadow-2xs inset-shadow-white/40 h-30 rounded-lg text-white p-4 mx-2 border-2 border-neutral-700 flex flex-col justify-center items-start gap-2">
+            <div className="flex flex-row justify-start items-start gap-2 font-semibold"><ChartNoAxesCombined className="size-8 rounded-full stroke-white" />{title}</div>
+            <div className="text-neutral-400">{description}</div>
+        </div>
+    )
+};

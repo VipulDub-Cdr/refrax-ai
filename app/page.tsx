@@ -4,10 +4,11 @@ import FirstPage from "@/components/firstPage";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Thirdpage from '@/components/thirdpage';
-import Fourthpage from '@/components/fourthpage';
+import FifthPage from '@/components/fifthpage';
 import Footer from "@/components/footer";
 import Premium from "@/components/premium"
-
+import ThirdPage2 from "@/components/thirdpage2";
+import FourthPage from "@/components/fourthpage";
 export default function Home() {
 
   return (
@@ -18,7 +19,7 @@ export default function Home() {
       </div>
 
       {/* bg-[url('/bgimage.png')] */}
-      <div id="first-page" className="h-full w-full bg-cover bg-right-bottom md:bg-center bg-gradient-to-b from-zinc-300 to-white" > 
+      <div id="first-page" className="h-full w-full" > 
         <FirstPage/>
       </div>
 
@@ -30,9 +31,13 @@ export default function Home() {
 
       <Thirdpage/> 
 
+      <ThirdPage2/>
+
+      <FourthPage/>
+
       <Premium/>
 
-      <Fourthpage/>
+      <FifthPage/>
 
       <Footer/>
 
@@ -46,33 +51,33 @@ export function Navbar(){
 
   const router = useRouter();
   //   rounded-3xl shadow-[#cacfe2] shadow-md 
-  return <div className="w-full top-0 right-0 pl-3 md:px-4 py-2 flex flex-row justify-between items-center text-[1.2rem] bg-white/30 backdrop-blur-xl "> 
+  return <div className="text-neutral-300 text-[1.1rem] w-full top-0 right-0 pl-3 md:px-4 py-2 flex flex-row justify-between md:justify-around items-center"> 
     
     <div className="flex flex-row justify-between items-center gap-3">
       {/* <div className="border-2 border-gray-300 rounded-2xl px-4 py-3"></div> */}
-      <div className="font-semibold">ReFrax AI</div>
+      <div className="">ReFrax AI</div>
     </div>
 
-    <div className="hidden md:flex flex-row justify-center items-center gap-10 text-lg">
+    <div className="hidden md:flex flex-row justify-center items-center gap-10">
       <Link href="#first-page">
-        <button className="cursor-pointer hover:underline hover:underline-offset-2">Home</button>
+        <button className="cursor-pointer hover:underline hover:underline-offset-2 select-none">Home</button>
       </Link>
-        <Link href="#second-page">
-          <button className="relative px-2 cursor-pointer hover:underline hover:underline-offset-2 text-black font-semibold">
+        <Link href="#demo">
+          <button className="relative px-2 cursor-pointer hover:underline hover:underline-offset-2 font-semibold">
             {/* <div className="absolute right-0 top-0 border-3 border-zinc-600 animate-ping rounded-full bg-sky-400 opacity-75"></div> */}
-            <div className="animate-pulse">Demo</div>
+            <div className="animate-pulse select-none">Demo</div>
           </button>
         </Link>
-        <Link href="#third-page">
-          <button className="cursor-pointer hover:underline hover:underline-offset-2">Impact</button>
+        <Link href="#pricing">
+          <button className="cursor-pointer hover:underline hover:underline-offset-2 select-none">Pricing</button>
         </Link>
-        <Link href="#fourth-page">
-          <button className="cursor-pointer hover:underline hover:underline-offset-2">FAQs</button>
+        <Link href="#faqs">
+          <button className="cursor-pointer hover:underline hover:underline-offset-2 select-none">FAQs</button>
         </Link>
     </div>
 
-      <div className="px-2 md:pr-0 rounded-lg text-white flex flex-row justify-center items-center hover:cursor-pointer" onClick={()=>{router.push("/signin")}}>
-            <div className="bg-black/80 rounded-xl px-3 py-1 hover:bg-zinc-800 transition-all delay-100 duration-300">Sign in</div>
+      <div className="px-2 md:pr-0 rounded-lg flex flex-row justify-center items-center hover:cursor-pointer select-none" onClick={()=>{router.push("/signin")}}>
+            <div className="bg-white text-[1rem] rounded-sm px-3 py-1 hover:bg-zinc-300 hover:ring-1 hover:ring-white transition-all delay-100 duration-300 text-black">Sign in</div>
       </div>
       {/* <div className="text-yellow-400">Register</div> */}
 

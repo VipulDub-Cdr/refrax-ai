@@ -140,7 +140,7 @@ export default function Dashboard() {
         <div className={`bg-[#0A0A0A] h-[100vh] w-[100vw]`}>
 
 
-            {session ?
+            { session ?
                 //  absolute top-0 left-[26%] md:left-[6.5%] 
 
                 <div className={`w-full h-full text-white flex flex-row justify-between items-center`}>
