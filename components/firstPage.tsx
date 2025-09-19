@@ -1,5 +1,3 @@
-import Link from "next/link"
-import { HoverBorderGradientDemo } from "./heroButton"
 import { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
@@ -28,7 +26,7 @@ export default function Firstpage() {
             <div className="h-[30%] mt-14 px-2 md:px-0 md:mt-0  flex flex-col md:flex-row  justify-start items-start pt-[8%] md:mx-44 gap-2">
                 <div className="flex flex-col gap-2">
                     <div className="border-2 border-neutral-800 rounded-3xl z-10 w-[85%] md:w-[34%] flex flex-row items-center justify-start inset-shadow-sm inset-shadow-white/10 backdrop-blur-lg">
-                        <div className="m-1 px-1 bg-neutral-800 rounded-3xl text-neutral-200 text-sm">What's new?</div>
+                        <div className="m-1 px-1 bg-neutral-800 rounded-3xl text-neutral-200 text-sm">{`What's new?`}</div>
                         <div className="text-white text-sm">Introducing knowledge thingy</div>
                     </div>
                     <div className="z-10 w-full md:w-[80%] text-[3rem]/12 text-white">Intelligent Code Formatter That Mirrors Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-blue-600 to-blue-900">Personal Style</span></div>
