@@ -8,7 +8,7 @@ interface MyComponentProps {
 
 export default function Thirdpage() {
 
-    return <div id="third-page" className="bg-black h-screen w-screen flex flex-col justify-center items-center gap-2 md:pt-0 pt-[20%] select-none">
+    return <div id="third-page" className="bg-black h-screen md:max-h-[60vh] w-screen flex flex-col justify-center items-center gap-2 md:pt-0 pt-[20%] select-none">
         <div className='text-[1.8rem]/10 md:text-[2.5rem]/12 text-white px-[4%] md:px-[20%] text-center font-light'>Effortlessly Formats Your Code to Match Your Unique Style with AI</div>
         <div className='p-2 md:px-[8%] w-full h-full flex flex-col md:flex-row  justify-center items-center mt-4 gap-4 md:gap-0'>
             <div className='w-full md:w-5/8 h-full border-2 border-neutral-900 mx-3 rounded-sm flex justify-center items-center' style={{

@@ -1,5 +1,5 @@
 export default function Premium() {
-    return <div id="pricing" className="relative w-screen h-screen flex flex-col justify-start items-center p-4 gap-2 md:mb-0 pb-4 pt-[25%] md:pt-0 text-white bg-black">
+    return <div id="pricing" className="relative w-screen md:max-h-[50vw] h-screen flex flex-col justify-start items-center p-4 gap-2 md:mb-0 pb-4 pt-[25%] md:pt-0 text-white bg-black">
         {/* <div className="absolute top-[2%] hidden md:flex md:left-[10%] h-80 w-80 z-[-20] rounded-full bg-purple-200 -rotate-x-20 rotate-y-30"></div>
         <div className="absolute top-[80%] left-0 md:left-[20%] h-34 w-34 z-[-20] rounded-full bg-blue-200 rotate-x-20 rotate-y-30"></div>
         <div className="hidden md:flex absolute top-[2%] left-[64%] h-120 w-120 z-[-20] rounded-full bg-blue-200 rotate-x-20 rotate-y-30"></div> */}

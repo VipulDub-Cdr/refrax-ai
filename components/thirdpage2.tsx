@@ -16,7 +16,7 @@ export default function ThirdPage2(){
     },[front])
 
     return (
-        <div className="h-screen w-screen px-[5%] md:px-[16%] py-[4%] bg-black">
+        <div className="h-screen md:max-h-[60vh] w-screen px-[5%] md:px-[16%] py-[4%] bg-black">
             <div className="w-full h-full flex flex-col md:flex-row justify-center items-center gap-6">
                 <div className="w-full md:w-1/2 h-full md:p-4 flex flex-col justify-start items-start pt-[20%]">
                     <div className="w-full md:w-[40%] text-[2rem]/10 text-white">Engineered strictly for vibe users</div>
