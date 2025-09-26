@@ -10,6 +10,8 @@ import Premium from "@/components/premium"
 import ThirdPage2 from "@/components/thirdpage2";
 import FourthPage from "@/components/fourthpage";
 import { Poppins } from "next/font/google";
+import gsap from "gsap"
+import { useEffect } from "react";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -18,10 +20,40 @@ const poppins = Poppins({
 
 export default function Home() {
 
+  useEffect(()=>{
+
+    gsap.to("#loading",{
+      opacity:0,
+      delay:0,
+      duration:2,
+    })
+
+    gsap.to("#spinner",{
+      rotate:360,
+      repeat:-1,
+      delay:0,
+      duration:1,
+    })
+
+    gsap.to("#loading",{
+      delay:2,
+      duration:0.1,
+      height:0,
+      width:0,
+    })
+
+  },[])
+
   return (
-    <div className={`dark`}>
+    <div className={`relative dark h-full w-full`}>
+
+      <div id="loading" className="absolute w-full h-full bg-black z-200 flex flex-col justify-start items-center py-80 text-neutral-300 text-xl">
+        <div id="spinner" className="w-10 h-10 rounded-t-full border-t-2 border-neutral-300"></div>
+        <div>Loading Resources</div>
+      </div>
+
       {/* my-6 lg:my-9  md:px-50  px-3 */}
-      <div className='fixed w-full top-0 right-0 z-1000'>
+      <div className='fixed w-full top-0 right-0 z-100'>
         <Navbar/>
       </div>
 
