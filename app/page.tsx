@@ -9,10 +9,17 @@ import Footer from "@/components/footer";
 import Premium from "@/components/premium"
 import ThirdPage2 from "@/components/thirdpage2";
 import FourthPage from "@/components/fourthpage";
+import { Poppins } from "next/font/google";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["400"]
+})
+
 export default function Home() {
 
   return (
-    <div className="">
+    <div className={`dark`}>
       {/* my-6 lg:my-9  md:px-50  px-3 */}
       <div className='fixed w-full top-0 right-0 z-1000'>
         <Navbar/>
@@ -51,7 +58,7 @@ export function Navbar(){
 
   const router = useRouter();
   //   rounded-3xl shadow-[#cacfe2] shadow-md 
-  return <div className="text-neutral-300 text-[1.1rem] w-full top-0 right-0 pl-3 md:px-4 py-2 flex flex-row justify-between md:justify-around items-center"> 
+  return <div className="text-black dark:text-neutral-300 text-[1.1rem] w-full top-0 right-0 pl-3 md:px-4 py-2 flex flex-row justify-between md:justify-around items-center bg-white dark:bg-transparent backdrop-blur-xl"> 
     
     <div className="flex flex-row justify-between items-center gap-3">
       {/* <div className="border-2 border-gray-300 rounded-2xl px-4 py-3"></div> */}
@@ -77,7 +84,7 @@ export function Navbar(){
     </div>
 
       <div className="px-2 md:pr-0 rounded-lg flex flex-row justify-center items-center hover:cursor-pointer select-none" onClick={()=>{router.push("/signin")}}>
-            <div className="bg-white text-[1rem] rounded-sm px-3 py-1 hover:bg-zinc-300 hover:ring-1 hover:ring-white transition-all delay-100 duration-300 text-black">Sign in</div>
+            <div className="bg-white text-[1rem] rounded-sm px-3 py-1 hover:bg-zinc-300 hover:ring-1 hover:ring-white transition-all delay-50 duration-300 text-black">Sign in</div>
       </div>
       {/* <div className="text-yellow-400">Register</div> */}
 

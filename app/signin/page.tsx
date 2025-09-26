@@ -19,7 +19,7 @@ export default function SignInPage() {
             backgroundPosition: "0 0, 0 0, 0 0, 40px 40px, center"
             }}
             />
-            <div className="my-5 w-[85%] h-[35%] md:h-[50%] md:w-[25%] flex flex-col justify-center items-center gap-4 backdrop-blur-sm bg-black/20 rounded-xl">
+            <div className="my-5 w-[85%] h-[45%] md:h-[50%] md:w-[25%] flex flex-col justify-center items-center gap-4 backdrop-blur-sm bg-black/20 rounded-xl">
                 <div className="text-semibold text-neutral-200 mt-1 text-[2.2rem]/10 font-medium text-center">Refrax AI</div>
                 <div className=" text-neutral-400 text-[0.9rem]/4 px-10">To use Refrax AI you must log into an existing account or create one using one of the options below.</div>
 
