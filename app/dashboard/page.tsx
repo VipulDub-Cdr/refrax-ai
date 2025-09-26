@@ -6,7 +6,6 @@ import { TypingAnimation } from "@/components/magicui/typing-animation";
 import { ChangeEvent } from "react";
 import { Skeleton } from "@/components/ui/skeleton"
 import Image from "next/image";
-import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect";
 
 
 export default function Dashboard() {
@@ -142,10 +141,14 @@ export default function Dashboard() {
         <div className={`h-screen w-screen relative bg-black`}>
 
 
-            <BackgroundRippleEffect/>
+            <div className="absolute top-0 left-0 w-full h-full z-0">
 
-            {/* <div className="absolute top-0 left-0 w-full h-full z-0">
-                </div> */}
+               <div className="absolute inset-0 z-0" style={{background: "radial-gradient(ellipse 50% 100% at 10% 0%, rgba(226, 232, 240, 0.15), transparent 65%), #000000",}}/>
+                
+                <div className="absolute inset-0 opacity-30" style={{backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)`,backgroundSize: "60px 60px",}}/>
+            
+            </div>
+
 
             {/* absolute top-0 left-[26%] md:left-[6.5%]  */}
 

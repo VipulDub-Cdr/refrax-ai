@@ -6,11 +6,9 @@ import { TypingAnimation } from "@/components/magicui/typing-animation";
 import { ChangeEvent } from "react";
 import { Skeleton } from "@/components/ui/skeleton"
 import Image from "next/image";
-import { BackgroundRippleEffect } from "@/components/ui/background-ripple-effect";
 
 
 export default function Dashboard() {
-    const { data: session, status } = useSession();
     const [pattern, setPattern] = useState<string>("");
     const [rightBar, setrightBar] = useState(false);
     const [patternOriented, setPatternOriented] = useState(true);
@@ -100,8 +98,8 @@ export default function Dashboard() {
                     method: "POST",
                     headers: { "Content-Type": "application/json" },
                     body: JSON.stringify({
-                        name: session.user?.name,
-                        email: session.user?.email,
+                        // name: session.user?.name,
+                        // email: session.user?.email,
                     })
                 })
                 const data = await response.json();
@@ -141,15 +139,22 @@ export default function Dashboard() {
 
         <div className={`h-screen w-screen relative bg-black`}>
 
+            {/* 
+            <div
+            className="absolute inset-0 opacity-30"
+            
+            /> */}
 
-            <BackgroundRippleEffect/>
+            <div className="absolute top-0 left-0 w-full h-full z-0">
 
-            {/* <div className="absolute top-0 left-0 w-full h-full z-0">
-                </div> */}
+               <div className="absolute inset-0 z-0" style={{background: "radial-gradient(ellipse 50% 100% at 10% 0%, rgba(226, 232, 240, 0.15), transparent 65%), #000000",}}/>
+                
+            <div className="absolute inset-0 opacity-30" style={{backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)`,backgroundSize: "60px 60px",}}/>
+            </div>
 
             {/* absolute top-0 left-[26%] md:left-[6.5%]  */}
 
-            { session ? <div className={`w-full h-full text-white flex flex-row justify-between items-center z-10 border-0 border-white`}>
+            <div className={`w-full h-full text-white flex flex-row justify-between items-center z-10 border-0 border-white`}>
 
                 {
                     <div className={`opacity-0 ${help ? " opacity-100 " : " opacity-0 "} transition-opacity delay-100 duration-300 absolute left-[5%] pt-2 px-4 h-[45%] w-[90%] border-2 border-neutral-900 rounded-xl flex flex-col justify-around gap-2 bg-[#131313]/60 backdrop-blur-3xl md:bottom-0 md:left-0 z-20 md:w-[22%] md:m-2 top-30 md:top-10`}>
@@ -209,7 +214,7 @@ export default function Dashboard() {
                 <div className="w-full h-[80%] flex flex-col mt-0 md:mt-[9%] justify-end items-center gap-6 z-10 border-0 border-red-500">
 
                     <TypingAnimation className={`${rightBar ? "md:px-[10%]" : "md:px-[30%]"} text-5xl text-white md:text-5xl text-center transition-all delay-100 duration-300`}>{`Your Personal Code Formatter`}</TypingAnimation>
-                    <TypingAnimation className={` ${rightBar ? "md:w-[60%] md:flex" : "md:w-[30%] md:flex"} hidden text-lg font-light text-slate-200/80 text-center transition-all delay-100 duration-300`}>{`Welcome ${session.user?.name} start formatting your code by first providing a sample, then the code to be formatted.`}</TypingAnimation>
+                    <TypingAnimation className={` ${rightBar ? "md:w-[60%] md:flex" : "md:w-[30%] md:flex"} hidden text-lg font-light text-slate-200/80 text-center transition-all delay-100 duration-300`}>{`Welcome Vipul dubey start formatting your code by first providing a sample, then the code to be formatted.`}</TypingAnimation>
 
                     {/* <TypingAnimation className="w-[30%] text-lg font-light text-slate-200/80">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque illum cumque natus modi? Vitae, odio! Est quae laborum facere totam alias voluptatum, consectetur hic iusto impedit qui quis, aliquam voluptatibus?</TypingAnimation> */}
 
@@ -326,13 +331,7 @@ export default function Dashboard() {
 
                 </div>
 
-            </div> :
-
-                <div className="bg-black text-white text-center">
-
-                   Please Login First
-
-            </div>}
+            </div>
 
         </div>
 
