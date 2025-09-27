@@ -32,31 +32,31 @@ export default function Thirdpage() {
             </div>
         </div>
         <div className='hidden px-[8.8%] w-full h-1/4 md:flex justify-center items-center my-4'>
-            <div className='relative w-full h-full flex flex-row justify-between gap-4'>
-                <div className='absolute h-full w-[20%] bg-gradient-to-r from-neutral-900/80 to-neutral-950/0 rounded-sm'></div>
-                <div className='h-full w-full flex flex-col justify-center items-start text-white p-2  md:px-8'>
+            <div className='relative w-full h-full flex flex-row justify-between gap-0'>
+                <div className='absolute h-full w-[20%] bg-gradient-to-r from-neutral-900/80 to-neutral-950/0 rounded-sm border-0 border-white  '></div>
+                <div className='h-full w-full flex flex-col justify-center items-start text-white p-2  md:px-8 border-0 border-white'>
                     <div className='text-lg flex flex-row gap-2'>
-                        <div>Lorem, ipsum dolor.</div>
+                        <div>Personalized Code Formatting</div>
                     </div>
-                    <div className='text-md text-neutral-600'>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+                    <div className='text-md text-neutral-600'>Adapts to unique coding habits for consistent style.</div>
                 </div>
-                <div className='h-full w-full flex flex-col justify-center items-start text-white p-2  md:px-8'>
+                <div className='h-full w-full flex flex-col justify-center items-start text-white p-2  md:px-8 border-0 border-white'>
                     <div className='text-lg flex flex-row gap-2'>
-                        <div>Lorem, ipsum dolor.</div>
+                        <div>Pattern-Oriented Functionality</div>
                     </div>
-                    <div className='text-md text-neutral-600'>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+                    <div className='text-md text-neutral-600'>Prioritizes user conventions over generic quality check rules.</div>
                 </div>
-                <div className='h-full w-full flex flex-col justify-center items-start text-white p-2  md:px-8'>
+                <div className='h-full w-full flex flex-col justify-center items-start text-white p-2  md:px-8 border-0 border-white'>
                     <div className='text-lg flex flex-row gap-2'>
-                        <div>Lorem, ipsum dolor.</div>
+                        <div>Knowledge-Mode Efficiency</div>
                     </div>
-                    <div className='text-md text-neutral-600'>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+                    <div className='text-md text-neutral-600'>Applies best practices enhancing performance and code maintainability.</div>
                 </div>
-                <div className='h-full w-full flex flex-col justify-center items-start text-white p-2  md:px-8'>
+                <div className='h-full w-full flex flex-col justify-center items-start text-white p-2  md:px-8 border-0 border-white'>
                     <div className='text-lg flex flex-row gap-2'>
-                        <div>Lorem, ipsum dolor.</div>
+                        <div>Responsive User Interface</div>
                     </div>
-                    <div className='text-md text-neutral-600'>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</div>
+                    <div className='text-md text-neutral-600'>Delivers clean previews with seamless cross-device copy support.</div>
                 </div>
             </div>
         </div>

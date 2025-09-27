@@ -2,8 +2,11 @@ import { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import DarkVeil from "./DarkVeil";
+import Image from "next/image";
+import RotatingText from './RotatingText'
 
 export default function Firstpage() {
+
     const videoRef = useRef<HTMLVideoElement | null>(null);
     const router = useRouter();
 
@@ -24,9 +27,20 @@ export default function Firstpage() {
                     background: "radial-gradient(ellipse 80% 50% at 30% 0%, rgba(99, 102, 241, 0.25), transparent 70%), #000000",
                 }}
             />
-            <div className="absolute top-0 left-0 w-full h-full z-0">
-                    <DarkVeil/>
-                </div>
+            <div className="absolute top-0 left-0 w-full h-full z-2">
+                <DarkVeil warpAmount={2.4} />
+            </div>
+
+            {/* <div
+                className="absolute inset-0 opacity-30"
+                style={{
+                    backgroundImage: `
+          linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)
+        `,
+                    backgroundSize: "60px 60px",
+                }}
+            /> */}
 
             {/* <div
 className="absolute inset-0 z-0 dark:hidden"
@@ -43,12 +57,28 @@ radial-gradient(circle at 40% 40%, rgba(120,119,198,0.1) 0%, transparent 50%)`,
                 <div className="w-full md:w-[80%] flex flex-col justify-start items-start gap-2">
 
                     <div className="border-2 border-[#2c4a9d] dark:border-neutral-800 rounded-3xl z-10 w-80 flex flex-row items-center justify-start inset-shadow-sm inset-shadow-white/10 backdrop-blur-lg ">
-                        <div className="m-1 px-1 bg-black dark:bg-neutral-800 rounded-3xl text-neutral-200 text-sm">{`What's new?`}</div>
+                        <div className="m-1 px-1 bg-black dark:bg-black/60 dark:backdrop-blur-2xl rounded-3xl text-neutral-200 text-sm">{`What's new?`}</div>
                         <div className="text-blue-900 dark:text-white text-sm">Introducing knowledge thingy</div>
                     </div>
 
-                    <div className="z-10 w-full md:w-[80%] text-[3rem]/12 text-black dark:text-white">Intelligent Code Formatter That Mirrors Your <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-blue-600 to-blue-900">Personal Style</span></div>
-                    <div className="z-10 w-full md:w-[70%] text-[1.1rem]/6 text-neutral-500  mb-10">Refrax AI intelligently reformats your code to match your unique coding style, preserving your logic and personal programming patterns.</div>
+                    <div className="z-10 w-full md:w-[80%] text-[3rem]/12 text-black dark:text-white">
+                        <span className="border-0 border-white">Intelligent Code Formatter That Mirrors Your </span>
+                        <span className="inline-flex">
+                            <RotatingText
+                                texts={['Personal Style', 'Unique Style']}
+                                mainClassName="border-0 border-white bg-white/0 text-white rounded-xl px-0"
+                                staggerFrom={"last"}
+                                initial={{ y: "100%" }}
+                                animate={{ y: 0 }}
+                                exit={{ y: "-120%" }}
+                                staggerDuration={0.025}
+                                splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
+                                transition={{ type: "spring", damping: 30, stiffness: 400 }}
+                                rotationInterval={3200}
+                            />
+                        </span>
+                    </div>
+                    <div className="z-10 w-full md:w-[70%] text-[1.1rem]/6 text-neutral-400  mb-10">Refrax AI intelligently reformats your code to match your unique coding style, preserving your logic and personal programming patterns.</div>
                 </div>
 
                 <div className="w-full md:w-50 h-full flex flex-col md:flex-row justify-center items-center gap-2 my-[6%]">
@@ -62,7 +92,7 @@ radial-gradient(circle at 40% 40%, rgba(120,119,198,0.1) 0%, transparent 50%)`,
 
             <div id="demo" className='h-full w-full z-10 flex justify-center items-center mt-10 p-6 md:p-0'>
                 <video ref={videoRef} autoPlay loop muted playsInline className="h-[50vh] md:h-full md:w-[75%] w-full rounded-lg border-2 border-neutral-900 ring-8 md:ring-12 md:ring-[#182332]/30 ring-[#182332]/50 object-cover">
-                    <source src="/demoVideo1.mp4" type="video/mp4" />
+                    <source src="/demoVideo3.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
             </div>

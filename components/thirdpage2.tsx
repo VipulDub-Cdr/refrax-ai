@@ -23,13 +23,13 @@ export default function ThirdPage2(){
 
                 <div className="w-full md:w-1/2 h-full md:p-4 flex flex-col justify-start items-start pt-[20%] border-0 border-blue-300">
                     <div className="w-full md:w-[40%] text-[2rem]/10 text-white">Engineered strictly for vibe users</div>
-                    <div className="text-lg text-white pt-6 font-semibold">Transparent Execution logs</div>
-                    <div className="w-[75%] text-sm text-neutral-500 font-semibold pt-1 pb-[10%]"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat eaque placeat delectus fugiat maxime!</div>
-                    <div className="text-[1.4rem] text-white py-[3%] font-light">Explore Reporting tools</div>
+                    <div className="text-lg text-white pt-6 font-semibold">Simple and Fast for users</div>
+                    <div className="w-[75%] text-sm text-neutral-500 font-semibold pt-1 pb-[10%]"> Format your code effortlessly while keeping your unique coding style intact. It is easy to use. </div>
+                    <div className="text-[1.4rem] text-white py-[3%] font-light">Upload the sample code file</div>
                     <div className="w-full h-[2px] bg-gradient-to-r from-purple-600 via-orange-300 to-red-300"></div>
-                    <div className="text-[1.4rem] text-white py-[3%] font-light">Lorem ipsum dolor sit amet consectetur.</div>
+                    <div className="text-[1.4rem] text-white py-[3%] font-light">Select the modes</div>
                     <div className="w-full h-0 border-[1px] border-neutral-600  bg-gradient-to-r from-purple-600 via-orange-300 to-red-300"></div>
-                    <div className="text-[1.4rem] text-white py-[3%] font-light">Lorem, ipsum.</div>
+                    <div className="text-[1.4rem] text-white py-[3%] font-light">Upload the the file to be formatted</div>
                     <div className="w-full h-0 border-[1px] border-neutral-600 bg-gradient-to-r from-purple-600 via-orange-300 to-red-300"></div>
                 </div>
 
