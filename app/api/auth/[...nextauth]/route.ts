@@ -1,5 +1,6 @@
 import NextAuth from "next-auth";
 import GithubProvider from "next-auth/providers/github";
+import GoogleProvider from "next-auth/providers/google";
 import { userModel } from "@/lib/db";
 import { connect } from "mongoose";
 const handler = NextAuth({
@@ -8,6 +9,10 @@ const handler = NextAuth({
       clientId: process.env.GITHUB_ID!,
       clientSecret: process.env.GITHUB_SECRET!,
     }),
+    GoogleProvider({
+      clientId: process.env.Google_Client_ID!,
+      clientSecret: process.env.Google_Client_Secret!,
+    })
   ],
   callbacks: {
     async redirect() {

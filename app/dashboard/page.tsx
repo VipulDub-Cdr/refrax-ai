@@ -309,7 +309,7 @@ export default function Dashboard() {
                         </button>
                     )}
                     <pre
-                        className="text-white text-sm bg-[#000000] p-3 rounded-lg overflow-x-auto whitespace-pre-wrap"
+                        className="text-white text-sm bg-black p-3 rounded-lg overflow-x-auto whitespace-pre-wrap"
                     >
                         <code><TypingAnimation>{`${code.slice(3, -3)}`}</TypingAnimation></code>
                     </pre>
