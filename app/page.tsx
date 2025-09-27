@@ -52,7 +52,7 @@ export default function Home() {
         className="fixed top-0 left-0 w-full h-screen bg-black/60 backdrop-blur-lg z-[200] flex flex-col justify-center items-center py-80 text-neutral-300 text-xl"
       >
         <div className="text-xl">
-          "Shaping your code, the way you write it"
+          {`"Shaping your code, the way you write it"`}
         </div>
       </div>
 
