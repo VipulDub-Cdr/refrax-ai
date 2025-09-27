@@ -5,6 +5,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { CodeBlock } from "@/components/ui/code-block";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export default function Dashboard() {
   const [pattern, setPattern] = useState<string>("");
@@ -80,7 +81,6 @@ export default function Dashboard() {
 
   return (
     <div className={`h-screen w-screen relative bg-black`}>
-      {/* background */}
       <div className="absolute top-0 left-0 w-full h-full z-0">
         <div
           className="absolute inset-0 z-0"
@@ -99,9 +99,7 @@ export default function Dashboard() {
         />
       </div>
 
-      {/* main content */}
       <div className="w-full h-full text-white flex flex-row justify-between items-center z-10">
-        {/* help section */}
         {help && (
           <div className="absolute left-[5%] pt-2 px-4 h-[45%] w-[90%] border-2 border-neutral-900 rounded-xl flex flex-col justify-around gap-2 bg-[#131313]/60 backdrop-blur-3xl md:bottom-0 md:left-0 z-20 md:w-[22%] md:m-2 top-30 md:top-10">
             <div className="font-semibold text-xl">Getting Started</div>
@@ -133,7 +131,6 @@ export default function Dashboard() {
           </div>
         )}
 
-        {/* top buttons */}
         <div className="absolute top-0 left-0 flex flex-row z-10">
           <button
             type="button"
@@ -157,7 +154,6 @@ export default function Dashboard() {
           </button>
         </div>
 
-        {/* center area */}
         <div className="w-full h-[80%] flex flex-col mt-0 md:mt-[9%] justify-end items-center gap-6 z-10">
           <TypingAnimation className="text-4xl text-white md:text-5xl text-center w-100 md:w-120">
             {`Your Personal Code Formatter`}
@@ -167,21 +163,18 @@ export default function Dashboard() {
             then the code to be formatted. (Only once)
           </TypingAnimation>
 
-          {/* warnings */}
           {pattern == "" && (
-            <div className="md:absolute md:top-0 md:my-4 text-red-400 border-1 border-red-400 px-3 rounded-lg">
+            <div className="md:absolute md:top-0 md:my-3 text-red-400 border-1 border-red-400 px-3 rounded-lg">
               Please upload the sample code first
             </div>
           )}
 
-          {/* file uploads */}
           <div
             style={{
               background: `radial-gradient(circle at top,rgba(255,255,255,0.1) 0%,rgba(255,255,255,0.08) 20%,rgba(0,0,0,10) 60%)`,
             }}
             className="relative w-full md:w-[50vw] min-h-78 border-4 border-b-0 border-neutral-900 rounded-t-3xl bg-black"
           >
-            {/* sample file */}
             <div className="pt-6 w-full flex flex-row justify-center items-center border-0 border-white">
               <label
                 htmlFor="sample-file-upload"
@@ -214,7 +207,6 @@ export default function Dashboard() {
 
 
 
-            {/* code file */}
             <div className="my-3 w-full flex flex-row justify-center items-center border-0 border-red-500 ">
               <label
                 htmlFor="file-upload"
@@ -251,10 +243,9 @@ export default function Dashboard() {
           </div>
         </div>
 
-        {/* right panel */}
         <div
-          className={`z-100 right-0 bg-black h-[100vh] transition-all duration-500 ${
-            rightBar ? "w-[70%] px-4 py-2" : "w-0"
+          className={`absolute md:relative z-100 right-0 bg-black h-[100vh] transition-all duration-500 ${
+            rightBar ? "w-full md:w-[70%] px-4 py-2" : "w-0"
           }`}
         >
           {rightBar && (
@@ -281,9 +272,9 @@ export default function Dashboard() {
         {/* right-center toggle button */}
         <button
           onClick={() => setRightBar(!rightBar)}
-          className="fixed right-0 top-1/2 -translate-y-1/2 border-2 mx-1 border-neutral-950 bg-neutral-900  text-white px-2 py-6 rounded-md shadow-md z-30"
+          className="fixed right-0 top-[17%] md:top-1/2 -translate-y-1/2 border-2 mx-1 border-neutral-950 bg-neutral-900  text-white px-2 py-6 rounded-md shadow-md z-30"
         >
-          {rightBar ? "→" : "←"}
+          {rightBar ? <ArrowRight/> : <ArrowLeft/>}
         </button>
       </div>
     </div>
