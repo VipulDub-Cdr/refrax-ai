@@ -28,7 +28,7 @@ export default function SecondPage() {
     }, [front])
 
     return (
-        <div id="second-page" className='border-2 border-white relative w-full h-full bg-[#000000] flex flex-col justify-center items-center md:py-[20%] gap-2'>
+        <div id="second-page" className='border-0 border-white relative w-full h-full bg-[#000000] flex flex-col justify-center items-center md:py-[10%] gap-2'>
             <div className='w-full md:w-[80%] h-full px-[2%] text-[2.5rem] text-white flex justify-start items-start'>
                 <div className='text-white'>Code Formatted in Your Unique Style</div>
             </div>
