@@ -36,7 +36,7 @@ export default function Home() {
     // })
 
     gsap.to("#loading", {
-      delay: 1,
+      delay: 1.8,
       duration: 0.1,
       height: 0,
       width: 0,
