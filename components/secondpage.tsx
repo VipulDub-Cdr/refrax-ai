@@ -131,7 +131,7 @@ int main() {
                 <div className='h-60 w-60 rounded-lg mx-6'>
                     <div className='relative h-40 w-full border-2 border-neutral-900 p-2 rounded-lg bg-gradient-to-br from-black/60 to-neutral-800 overflow-hidden px-12 pt-6'>
                             <div className='absolute left-[42%] top-[19%] w-[14%] h-[8%] rounded-full bg-neutral-800'></div>
-                            <Image width={1000} height={1000} src="/mobileView.jpg" alt="mobileview" className='ring-6 ring-neutral-800 rounded-t-3xl object-cover' />
+                            <Image width={1000} height={1000} src="/mobileView.png" alt="mobileview" className='px-[2px] ring-6 ring-neutral-800 rounded-t-3xl object-cover' />
                     </div>
                     <div className='p-1 text-[1rem] font-semibold text-white'>Responsive Design</div>
                     <div className='px-1 text-[0.8rem] font-semibold text-zinc-400'>Easily work on the code over the devices.</div>

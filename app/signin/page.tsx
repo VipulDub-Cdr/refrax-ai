@@ -6,20 +6,29 @@ export default function SignInPage() {
     return (
         <div className="h-[100vh] w-[100vw] flex justify-center items-center bg-radial-[at_50%_50%] from-neutral-800 to-neutral-800">
             <div
-            className="absolute inset-0 z-0 pointer-events-none"
-            style={{
-            backgroundImage: `
-            repeating-linear-gradient(0deg, rgba(255,255,255,0.04) 0, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 40px),
-            repeating-linear-gradient(45deg, rgba(0,255,128,0.09) 0, rgba(0,255,128,0.09) 1px, transparent 1px, transparent 20px),
-            repeating-linear-gradient(-45deg, rgba(255,0,128,0.10) 0, rgba(255,0,128,0.10) 1px, transparent 1px, transparent 30px),
-            repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 80px),
-            radial-gradient(circle at 60% 40%, rgba(0,255,128,0.05) 0, transparent 60%)
-            `,
-            backgroundSize: "80px 80px, 40px 40px, 60px 60px, 80px 80px, 100% 100%",
-            backgroundPosition: "0 0, 0 0, 0 0, 40px 40px, center"
-            }}
-            />
-            <div className="my-5 w-[85%] h-[45%] md:h-[50%] md:w-[25%] flex flex-col justify-center items-center gap-4 backdrop-blur-sm bg-black/20 rounded-xl">
+  className="absolute inset-0 z-0 pointer-events-none"
+  style={{
+    backgroundImage: `
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.04) 0, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 40px),
+      repeating-linear-gradient(45deg, rgba(0,128,255,0.09) 0, rgba(0,128,255,0.09) 1px, transparent 1px, transparent 20px),
+      repeating-linear-gradient(-45deg, rgba(255,0,128,0.10) 0, rgba(255,0,128,0.10) 1px, transparent 1px, transparent 30px),
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 80px),
+      radial-gradient(circle at 60% 40%, rgba(0,128,255,0.05) 0, transparent 60%)
+    `,
+    backgroundSize: "80px 80px, 40px 40px, 60px 60px, 80px 80px, 100% 100%",
+    backgroundPosition: "0 0, 0 0, 0 0, 40px 40px, center"
+  }}
+/>
+
+
+            {/* <div
+                className="absolute inset-0 z-0"
+                style={{
+                    background: "radial-gradient(ellipse 80% 60% at 50% 0%, rgba(120, 180, 255, 0.25), transparent 70%), #000000",
+                }}
+            /> */}
+
+            <div className="my-5 w-[85%] h-[45%] md:h-[50%] md:w-[25%] flex flex-col justify-center items-center gap-4 backdrop-blur-sm bg-white/2 rounded-xl">
                 <div className="text-semibold text-neutral-200 mt-1 text-[2.2rem]/10 font-medium text-center">Refrax AI</div>
                 <div className=" text-neutral-400 text-[0.9rem]/4 px-10">To use Refrax AI you must log into an existing account or create one using one of the options below.</div>
 

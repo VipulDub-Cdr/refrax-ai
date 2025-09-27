@@ -91,8 +91,8 @@ radial-gradient(circle at 40% 40%, rgba(120,119,198,0.1) 0%, transparent 50%)`,
             </div>
 
             <div id="demo" className='relative h-full w-full z-10 flex justify-center items-center mt-10 p-6 md:p-0'>
-                <video ref={videoRef} autoPlay loop muted playsInline className="h-[50vh] md:h-full md:w-[75%] w-full rounded-lg border-2 border-neutral-900 ring-8 md:ring-12 md:ring-[#182332]/30 ring-[#182332]/50 object-cover">
-                    <source src="/demoVideo1.mp4" type="video/mp4" />
+                <video ref={videoRef} autoPlay loop muted playsInline className="h-[50vh] md:h-full md:w-[75%] w-full rounded-lg border-0 border-neutral-900 ring-8 md:ring-12 md:ring-[#182332]/30 ring-[#182332]/50 object-cover brightness-60">
+                    <source src="/demoVideo3.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
                 {/* <Image width={1000} height={1000} src={`/dashboard.png`} alt="dashboard" className="h-[50vh] md:h-[80vh] md:w-[75%] w-full rounded-lg border-2 border-neutral-900 ring-8 md:ring-12 md:ring-[#182332]/30 ring-[#182332]/50 object-cover"/> */}
