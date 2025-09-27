@@ -1,9 +1,9 @@
 import { useEffect, useRef } from "react";
 import { useRouter } from "next/navigation";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
-import DarkVeil from "./DarkVeil";
 import Image from "next/image";
 import RotatingText from './RotatingText'
+// import DarkVeil from "./DarkVeil";
 
 export default function Firstpage() {
 
@@ -27,38 +27,38 @@ export default function Firstpage() {
                     background: "radial-gradient(ellipse 80% 50% at 30% 0%, rgba(99, 102, 241, 0.25), transparent 70%), #000000",
                 }}
             />
-            <div className="absolute top-0 left-0 w-full h-full z-2">
+            {/* <div className="absolute top-0 left-0 w-full h-full z-2">
                 <DarkVeil warpAmount={2.4} />
-            </div>
+            </div> */}
 
-            {/* <div
+            <div
                 className="absolute inset-0 opacity-30"
                 style={{
                     backgroundImage: `
-          linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)
-        `,
+                    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)
+                    `,
                     backgroundSize: "60px 60px",
                 }}
-            /> */}
+            />
 
             {/* <div
-className="absolute inset-0 z-0 dark:hidden"
-style={{
-backgroundImage: `
-radial-gradient(circle at 20% 80%, rgba(120,119,198,0.3) 0%, transparent 50%),
-radial-gradient(circle at 80% 20%, rgba(255,255,255,0.5) 0%, transparent 50%),
-radial-gradient(circle at 40% 40%, rgba(120,119,198,0.1) 0%, transparent 50%)`,
-}}
-/> */}
+                className="absolute inset-0 z-0 dark:hidden"
+                style={{
+                backgroundImage: `
+                radial-gradient(circle at 20% 80%, rgba(120,119,198,0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.5) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(120,119,198,0.1) 0%, transparent 50%)`,
+                }}
+                /> */}
 
             <div className="w-full h-full max-w-screen flex flex-col md:flex-row justify-start items-start pt-20 md:pt-30 md:px-[12%] px-2">
 
                 <div className="w-full md:w-[80%] flex flex-col justify-start items-start gap-2">
 
-                    <div className="border-2 border-[#2c4a9d] dark:border-neutral-800 rounded-3xl z-10 w-80 flex flex-row items-center justify-start inset-shadow-sm inset-shadow-white/10 backdrop-blur-lg ">
-                        <div className="m-1 px-1 bg-black dark:bg-black/60 dark:backdrop-blur-2xl rounded-3xl text-neutral-200 text-sm">{`What's new?`}</div>
-                        <div className="text-blue-900 dark:text-white text-sm">Introducing knowledge thingy</div>
+                    <div className="border-2 border-[#2c4a9d] dark:border-neutral-800/40 rounded-3xl z-10 w-76 flex flex-row items-center justify-start inset-shadow-sm inset-shadow-white/10 backdrop-blur-lg ">
+                        <div className="m-1 px-1 bg-black dark:bg-black/40 dark:backdrop-blur-2xl rounded-3xl text-neutral-200 text-sm">{`What's new?`}</div>
+                        <div className="text-blue-900 dark:text-white text-sm">Introducing Knowledge mode</div>
                     </div>
 
                     <div className="z-10 w-full md:w-[80%] text-[3rem]/12 text-black dark:text-white">

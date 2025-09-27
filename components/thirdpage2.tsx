@@ -17,7 +17,7 @@ export default function ThirdPage2(){
     },[front])
 
     return (
-        <div className="h-full md:max-h-screen w-screen border-0 border-white px-[5%] md:px-[16%] py-[4%] bg-black">
+        <div className="h-screen md:max-h-screen w-screen border-0 border-white px-[5%] md:px-[16%] py-[4%] bg-black">
             
             <div className="w-full h-full flex flex-col md:flex-row justify-center items-start gap-6 border-0 border-white">
 
@@ -35,7 +35,7 @@ export default function ThirdPage2(){
 
                 <div className="w-full h-120 md:w-1/2 border-0 border-red-500">
                     <div className="relative h-full w-full rounded-xl bg-gradient-to-b from-neutral-900 to-neutral-950 flex justify-end items-end inset-shadow-2xs inset-shadow-neutral-800">
-                        <div className={`transition-all delay-100 duration-300 ${front ? "absolute right-0 bottom-0 h-[85%] w-[80%] border-t-2 border-l-2 border-neutral-800 rounded-tl-lg bg-[#13111B] text-white" : "h-[80%] w-[84%] border-1 border-neutral-800 rounded-tl-lg bg-[#13111B] text-white" } `}>
+                        <div className={`transition-all delay-100 duration-300 ${front ? "absolute right-0 bottom-0 h-[85%] w-[80%] border-t-2 border-l-2 border-neutral-800 rounded-tl-lg bg-neutral-950 text-white" : "h-[80%] w-[84%] border-1 border-neutral-800 rounded-tl-lg bg-neutral-950 text-white" } `}>
                             <pre  className="relative overflow-hidden w-full h-full p-4 text-[0.8rem]">
                                 <Copy className="h-4 w-4 absolute right-4 top-4"/>
                                 <CodeBlock language="cpp" filename="formatted.cpp" code={`#include<bits/stdc++.h>
@@ -60,11 +60,12 @@ int main() {
 `}/>
                             </pre>
                         </div>
-                        <div className={`transition-all delay-100 duration-300 ${!front ? "absolute right-0 bottom-0 h-[85%] w-[80%] border-t-2 border-l-2 border-neutral-800 rounded-tl-lg bg-[#13111B] text-neutral-300" : "h-[80%] w-[84%] border-1 border-neutral-800 rounded-tl-lg bg-[#13111B] text-white-400" } `}> 
+                        <div className={`transition-all delay-100 duration-300 ${!front ? "absolute right-0 bottom-0 h-[85%] w-[80%] border-t-2 border-l-2 border-neutral-800 rounded-tl-lg bg-neutral-950 text-neutral-300" : "h-[80%] w-[84%] border-1 border-neutral-800 rounded-tl-lg bg-neutral-950 text-white-400" } `}> 
                             <pre  className="overflow-hidden w-full h-full p-4 text-[0.8rem]">
                                 <code>
 {`
-//unformattedCode.cpp
+unformattedCode.cpp
+
 #include<iostream>
 #include<vector>
 using namespace std;

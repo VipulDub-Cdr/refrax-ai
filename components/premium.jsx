@@ -42,7 +42,7 @@ export default function Premium() {
                 <div className="w-full h-full hidden md:flex flex-col justify-start items-start p-4">
                     <div className="text-[2rem] font-semibold text-start pb-2 text-white">$49<span className="text-[1rem] text-neutral-500">/month</span></div>
                     <div className="w-full pb-4 flex flex-row justify-center items-center">
-                        <button className="w-full h-12 rounded-xl border-2 text-white hover:bg-blue-500 cursor-pointer transition delay-50 duration-200 hover:ring-2 ring-blue-600 hover:text-white">Get 14 days free trial</button>
+                        <button className="w-full h-12 rounded-xl border-2 text-white hover:border-blue-500 cursor-pointer transition delay-50 duration-200 hover:ring-2 ring-blue-600 hover:text-white">Get 14 days free trial</button>
                     </div>
                     <div className="flex flex-row gap-2">
                         <img className=" h-6 w-6" src="https://img.icons8.com/?size=100&id=pzHMd4OWQnT1&format=png&color=000000" alt="" />
@@ -71,7 +71,7 @@ export default function Premium() {
                 <div className="hidden md:flex w-full h-full flex-col justify-start items-start p-4">
                     <div className="text-[2rem] font-semibold text-start pb-2 text-white">$99<span className="text-[1rem] text-neutral-500">/month</span></div>
                     <div className="w-full pb-4 flex flex-row justify-center items-center">
-                        <button className="w-full h-12 rounded-xl border-2  text-neutral-4  00 hover:bg-yellow-500 cursor-pointer transition delay-50 duration-200 hover:ring-2 hover:ring-yellow-600">Unlimited Access</button>
+                        <button className="w-full h-12 rounded-xl border-2 text-neutral-4 hover:border-yellow-500 cursor-pointer transition delay-50 duration-200 hover:ring-2 hover:ring-yellow-600">Unlimited Access</button>
                     </div>
                     <div className="flex flex-row gap-2">
                         <img className=" h-6 w-6" src="https://img.icons8.com/?size=100&id=pzHMd4OWQnT1&format=png&color=000000" alt="" />

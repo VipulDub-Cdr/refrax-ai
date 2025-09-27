@@ -11,7 +11,7 @@ import ThirdPage2 from "@/components/thirdpage2";
 import FourthPage from "@/components/fourthpage";
 import { Poppins } from "next/font/google";
 import gsap from "gsap"
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -45,6 +45,7 @@ export default function Home() {
   }, [])
 
   const router = useRouter();
+
 
   return (
     <div className={`relative dark h-full w-full bg-black`}>
