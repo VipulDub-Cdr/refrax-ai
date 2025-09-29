@@ -82,7 +82,7 @@ export default function SignInPage() {
                                             <img className="h-8 w-8" src="https://img.icons8.com/?size=100&id=12599&format=png&color=000000" alt="" />
                                             <div className="text-[1rem]">Sign in with Github</div>
                                     </button>
-                                    <button onClick={()=>{setRedirect(true);router.push("/guest")}} className="w-full bg-white/10 backdrop-blur-xl rounded-sm h-full flex justify-center items-center gap-2 px-2 text-white hover:text-black hover:bg-white cursor-pointer transition-colors delay-100 duration-200">
+                                    <button onClick={()=>{setRedirect(true); signIn("credentials", { redirect: true })}} className="w-full bg-white/10 backdrop-blur-xl rounded-sm h-full flex justify-center items-center gap-2 px-2 text-white hover:text-black hover:bg-white cursor-pointer transition-colors delay-100 duration-200">
                                             <img className="h-8 w-8" src="https://img.icons8.com/?size=100&id=xXjlE05o3dcg&format=png&color=000000" alt="" />
                                             <div className="text-[1rem]">Sign in as a Guest</div>
                                     </button>
