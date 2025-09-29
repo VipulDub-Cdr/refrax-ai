@@ -91,7 +91,7 @@ export default function Firstpage() {
             </div>
 
             <div id="demo" className='relative h-full w-full z-10 flex justify-center items-center mt-10 p-6 md:p-0'>
-                <video ref={videoRef} autoPlay loop muted playsInline className="h-[50vh] md:h-full md:w-[75%] w-full rounded-lg border-0 border-neutral-900 ring-8 md:ring-12 md:ring-[#182332]/30 ring-[#182332]/50 object-cover brightness-60">
+                <video ref={videoRef} autoPlay loop muted playsInline className="h-[50vh] md:h-full md:w-[75%] w-full rounded-lg border-0 border-neutral-900 ring-8 md:ring-12 md:ring-[#182332]/30 ring-[#182332]/50 object-cover brightness-70 grayscale-50">
                     <source src="/demoVideo3.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
                 </video>
