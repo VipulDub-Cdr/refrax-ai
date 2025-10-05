@@ -35,28 +35,18 @@ export default function Firstpage() {
                 className="absolute inset-0 opacity-30"
                 style={{
                     backgroundImage: `
-                    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px)
+                    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px)
                     `,
                     backgroundSize: "60px 60px",
                 }}
             />
 
-            {/* <div
-                className="absolute inset-0 z-0 dark:hidden"
-                style={{
-                backgroundImage: `
-                radial-gradient(circle at 20% 80%, rgba(120,119,198,0.3) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.5) 0%, transparent 50%),
-                radial-gradient(circle at 40% 40%, rgba(120,119,198,0.1) 0%, transparent 50%)`,
-                }}
-                /> */}
-
-            <div className="w-full h-full max-w-screen flex flex-col md:flex-row justify-start items-start pt-20 md:pt-30 md:px-[12%] px-2">
+            <div className="w-full h-full max-w-screen flex flex-col md:flex-row justify-start items-start pt-20 md:pt-30 md:px-[12%] px-2 border-0 border-white">
 
                 <div className="w-full md:w-[80%] flex flex-col justify-start items-start gap-2">
 
-                    <div className="border-2 border-[#2c4a9d] dark:border-neutral-800/40 rounded-3xl z-10 w-76 flex flex-row items-center justify-start inset-shadow-sm inset-shadow-white/10 backdrop-blur-lg ">
+                    <div className="border-2 border-[#2c4a9d] dark:border-neutral-800/40 rounded-3xl z-10 w-76 flex flex-row items-center justify-start inset-shadow-sm inset-shadow-white/10 backdrop-blur-lg">
                         <div className="m-1 px-1 bg-black dark:bg-black/40 dark:backdrop-blur-2xl rounded-3xl text-neutral-200 text-sm">{`What's new?`}</div>
                         <div className="text-blue-900 dark:text-white text-sm">Introducing Knowledge mode</div>
                     </div>
@@ -82,7 +72,7 @@ export default function Firstpage() {
                 </div>
 
                 <div className="w-full md:w-50 h-full flex flex-col md:flex-row justify-center items-center gap-2 my-[6%]">
-                    <div className="z-10 p-2 w-full dark:bg-white rounded-sm bg-black text-white dark:text-black text-[0.8rem] font-semibold border-2 border-white text-center cursor-pointer hover:bg-black hover:text-white transition delay-100 duration-200 select-none" onClick={() => { router.push("/signin") }}>Get Started</div>
+                    <div className="z-10 p-2 w-full dark:bg-white rounded-sm text-white dark:text-black text-[0.8rem] font-semibold border-2 border-white text-center cursor-pointer dark:hover:bg-black dark:hover:text-white transition delay-100 duration-200 select-none" onClick={() => { router.push("/signin") }}>Get Started</div>
                     <div className="z-10 p-2 w-full rounded-sm dark:border-white text-black dark:text-white border-2 border-black text-[0.8rem] text-center font-semibold select-none">
                         <a href="https://github.com/VipulDub-Cdr/refrax-ai" className="flex flex-row gap-2 items-center justify-center"> <GitHubLogoIcon className="h-4 w-4" /><div>Github</div></a>
                     </div>

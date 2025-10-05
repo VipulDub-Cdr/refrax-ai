@@ -2,9 +2,7 @@ import Link from "next/link"
 import Image from "next/image"
 
 export default function Footer() {
-    return (<div className="h-[40vh] w-[100vw] bg-[#F17144} text-neutral-200 py-10" style={{
-background: "radial-gradient(125% 125% at 50% 10%, #000000 40%, #010133 100%)",
-}}>
+    return (<div className="h-[40vh] w-[100vw] bg-[#F17144} text-neutral-200 mt-10 bg-black" >
 
         <div className="flex flex-row h-full p-2 md:px-[18%]">
 

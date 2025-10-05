@@ -1,4 +1,7 @@
-import Marquee from 'react-fast-marquee';
+// import gsap from "gsap";
+// import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useEffect } from "react";
+// gsap.registerPlugin(ScrollTrigger);
 
 interface MyComponentProps {
     url: string;
@@ -6,7 +9,22 @@ interface MyComponentProps {
     description: string;
 }
 
+
 export default function Thirdpage() {
+
+    // useEffect(() => {
+    //     gsap.from("#third-page", {
+    //         y: 40,
+    //         opacity: 0,
+    //         duration: 1,
+    //         scrollTrigger: {
+    //             trigger: "#third-page",
+    //             start: "top 60%",
+    //             end: "top 40%",
+    //             toggleActions: "play none none reverse",
+    //         },
+    //     });
+    // }, []);
 
     return <div id="third-page" className="bg-black h-screen md:max-h-[100vh] w-screen border-0 border-white flex flex-col justify-center items-center gap-2 md:pt-0 pt-[20%] select-none">
         <div className='text-[1.8rem]/10 md:text-[2.5rem]/12 text-white px-[4%] md:px-[20%] text-center font-light'>Effortlessly Formats Your Code to Match Your Unique Style with AI</div>

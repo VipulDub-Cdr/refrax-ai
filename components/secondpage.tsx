@@ -96,7 +96,7 @@ int main() {
                                         </code>
                                     </pre>
                                 </div>
-                                <div className={`transition-all delay-100 duration-300 ${!front ? "absolute right-0 bottom-0 h-[85%] w-[80%] border-t-2 border-l-2 border-neutral-800 rounded-tl-lg bg-neutral-950 text-red-400" : "h-[80%] w-[84%] border-1 border-neutral-800 rounded-tl-lg bg-neutral-950 text-neutral-400"} `}>
+                                <div className={`transition-all delay-100 duration-300 ${!front ? "absolute right-0 bottom-0 h-[85%] w-[80%] border-t-2 border-l-2 border-neutral-800 rounded-tl-lg bg-neutral-950 text-neutral-300" : "h-[80%] w-[84%] border-1 border-neutral-800 rounded-tl-lg bg-neutral-950 text-neutral-400"} `}>
                                     <pre className="overflow-hidden w-full h-full p-4 text-[0.8rem]">
                                         <code>
                                             {`#include<iostream>
