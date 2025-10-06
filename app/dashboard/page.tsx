@@ -155,7 +155,7 @@ export default function Dashboard() {
             { session ? <div className={`w-full h-full text-white flex flex-row justify-between items-center z-10 border-0 border-white`}>
 
                 {
-                    <div className={`opacity-0 ${help ? " opacity-100 " : " opacity-0 "} transition-opacity delay-100 duration-300 absolute left-[5%] pt-2 px-4 h-[45%] w-[90%] border-2 border-neutral-900 rounded-xl flex flex-col justify-around gap-2 bg-[#131313]/60 backdrop-blur-3xl md:bottom-0 md:left-0 z-20 md:w-[22%] md:m-2 top-30 md:top-10`}>
+                    <div className={`opacity-0 ${help ? " opacity-100 " : " hidden "} transition-opacity delay-100 duration-300 absolute left-[5%] pt-2 px-4 h-[45%] w-[90%] border-2 border-neutral-900 rounded-xl flex flex-col justify-around gap-2 bg-[#131313]/60 backdrop-blur-3xl md:bottom-0 md:left-0 z-20 md:w-[22%] md:m-2 top-30 md:top-10`}>
                         <div className="font-semibold text-xl">Getting Started</div>
                         <div className="font-medium text-[1.05rem]">Follow these steps: </div>
                         <div className="flex flex-col px-3 h-full w-full gap-2 md:py-3">
@@ -211,8 +211,8 @@ export default function Dashboard() {
 
                 <div className="w-full h-[80%] flex flex-col mt-0 md:mt-[9%] justify-end items-center gap-6 z-10 border-0 border-red-500">
 
-                    <TypingAnimation className={`${rightBar ? "md:px-[10%]" : "md:px-[30%]"} text-5xl text-white md:text-5xl text-center transition-all delay-100 duration-300`}>{`Your Personal Code Formatter`}</TypingAnimation>
-                    <TypingAnimation className={` ${rightBar ? "md:w-[60%] md:flex" : "md:w-[30%] md:flex"} hidden text-lg font-light text-slate-200/80 text-center transition-all delay-100 duration-300`}>{`Welcome ${session.user?.name} start formatting your code by first providing a sample, then the code to be formatted.`}</TypingAnimation>
+                    <TypingAnimation className={`${rightBar ? "md:w-[60%] md:flex" : "md:w-[30%] min-w-100 md:flex"} text-5xl text-white md:text-5xl text-center transition-all delay-100 duration-300`}>{`Your Personal Code Formatter`}</TypingAnimation>
+                    <TypingAnimation className={` ${rightBar ? "md:w-[60%] md:flex" : "md:w-[30%] min-w-100 md:flex"} hidden text-lg font-light text-slate-200/80 text-center transition-all delay-100 duration-300`}>{`Welcome ${session.user?.name} start formatting your code by first providing a sample, then the code to be formatted.`}</TypingAnimation>
 
                     {/* <TypingAnimation className="w-[30%] text-lg font-light text-slate-200/80">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque illum cumque natus modi? Vitae, odio! Est quae laborum facere totam alias voluptatum, consectetur hic iusto impedit qui quis, aliquam voluptatibus?</TypingAnimation> */}
 
@@ -230,7 +230,7 @@ export default function Dashboard() {
                         }} */}
                     <div style={{
                         background: `radial-gradient(circle at top,rgba(255, 255, 255, 0.1) 0%,rgba(255, 255, 255, 0.08) 20%,rgba(0, 0, 0, 10) 60%)`,
-                        }}   className="relative w-full md:w-[50vw] min-h-78 border-4 border-b-0 border-neutral-900 rounded-t-3xl bg-black">
+                        }}   className="relative w-full md:min-w-180 md:w-[50vw] min-h-78 border-4 border-b-0 border-neutral-900 rounded-t-3xl bg-black">
 
 
                         <div className={`pt-6 w-full flex flex-row justify-center items-center`}>
