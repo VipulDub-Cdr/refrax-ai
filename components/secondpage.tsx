@@ -1,4 +1,4 @@
-// "use client"
+"use client"
 import React from 'react';
 import { useEffect, useRef, useState } from "react";
 import Image from 'next/image';
@@ -6,6 +6,9 @@ import { useRouter } from "next/navigation";
 import Marquee from 'react-fast-marquee';
 import { ChartBarMultiple } from './charts/barchart';
 import { CheckCheck, SquareLibrary, Asterisk} from 'lucide-react'
+import gsap from 'gsap';
+import {ScrollTrigger} from 'gsap/ScrollTrigger';
+gsap.registerPlugin(ScrollTrigger);
 
 interface MyComponentProps {
     url: string;
@@ -27,16 +30,17 @@ export default function SecondPage() {
 
     }, [front])
 
+ 
     return (
         <div id="second-page" className='border-0 border-white relative w-full h-full bg-[#000000] flex flex-col justify-center items-center md:py-[10%] gap-2'>
-            <div className='w-full md:w-[80%] h-full px-[2%] text-[2.5rem] text-white flex justify-start items-start'>
-                <div className='text-white'>Code Formatted in Your Unique Style</div>
+            <div className=' w-full md:w-[80%] h-full px-[2%] text-[2.5rem] text-white flex justify-start items-start'>
+                <div className=' text-white'>Code Formatted in Your Unique Style</div>
             </div>
             <div className='w-full md:w-[80%] h-full px-[2%] text-zinc-400 flex justify-start items-start'>
-                <div className='w-full md:w-[60%] text-[1rem]/5 text'>Refrax AI intelligently adapts to your coding style, allowing you to prioritize either closely following your personal patterns or adhering to best coding practices.</div>
+                <div className=' w-full md:w-[60%] text-[1rem]/5 text'>Refrax AI intelligently adapts to your coding style, allowing you to prioritize either closely following your personal patterns or adhering to best coding practices.</div>
             </div>
             <div className='z-10 absolute top-0 left-0 h-full md:w-60 bg-gradient-to-r from-black to-black/0'></div>
-            <Marquee pauseOnClick={true} play={true} direction="left" className='relative w-full h-full my-6 flex flex-row'>
+            <Marquee pauseOnClick={true} play={true} direction="left" className=' relative w-full h-full my-6 flex flex-row'>
                 <div className='h-60 w-60 rounded-lg mx-6'>
                     <div className='h-40 w-full border-2 border-neutral-900 rounded-lg bg-gradient-to-br from-black/60 to-neutral-800'>
                         <ChartBarMultiple />
@@ -54,20 +58,20 @@ export default function SecondPage() {
                 </div>
                 <div className='h-60 w-60 rounded-lg mx-6'>
                     <div className='h-40 w-full border-2 border-neutral-900 p-4 rounded-lg bg-gradient-to-br from-black/60 to-neutral-800 flex flex-col justify-start items-start gap-2'>
-                        <div className="p-[3px] w-full h-1/2 rounded-lg bg-gradient-to-r from-blue-900 to-blue-400/60 animate-pulse">
-                            <div className="w-full h-full rounded-lg bg-black text-white flex flex-row p-2 gap-4 justify-center items-center">
+                        <div className="p-[3px] w-full h-1/2 rounded-lg animate-pulse">
+                            <div className="w-full h-full rounded-lg border-2 text-white flex flex-row p-2 gap-4 justify-center items-center">
                                 {/* <CheckCheck className='stroke-green-600'/> */}
                                 <div className='rounded-t-full w-6 h-6 border-t-2 border-blue-100 animate-spin pl-6'></div>
                                 <div className='w-full text-[0.8rem] text-white font-normal'>Analyzing the Sample Code</div>
                             </div>
                         </div>
-                        <div className='w-full h-1/4 bg-purple-950/20 rounded-lg text-[0.8rem] py-2 text-white text-center'>AI action: <span className='text-transparent bg-clip-text bg-gradient-to-r from-purple-600 to-yellow-400'>Analyze the sample code</span></div>
+                        <div className='w-full h-1/4 rounded-lg text-[0.8rem] py-2 text-white text-center'>AI action: <span className='text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-700'>Analyze the sample code</span></div>
                     </div>
                     <div className='p-1 text-[1rem] font-semibold text-white'>AI-Enhanced Suggestions</div>
                     <div className='px-1 text-[0.8rem] font-semibold text-zinc-400'>Recommendations based on your coding pattern and modes.</div>
                 </div>
                 <div className='h-60 w-60 rounded-lg mx-6'>
-                    <div className='h-40 w-full border-2 border-neutral-900 p-4 rounded-lg bg-gradient-to-br from-black/60 to-neutral-800 flex flex-col justify-center items-center gap-2'>
+                    <div className='h-40 w-full border-2 border-neutral-900 rounded-lg bg-gradient-to-br from-black/60 to-neutral-800 flex flex-col justify-center items-center gap-2'>
                         <div className="w-full h-full">
                             <div className="relative h-full w-full rounded-lg bg-gradient-to-b from-neutral-900 to-neutral-950 flex justify-end items-end inset-shadow-2xs inset-shadow-neutral-800">
                                 <div className={`transition-all delay-100 duration-300 ${front ? "absolute right-0 bottom-0 h-[85%] w-[80%] border-t-2 border-l-2 border-neutral-800 rounded-tl-lg bg-neutral-950 text-white" : "h-[80%] w-[84%] border-1 border-neutral-800 rounded-tl-lg bg-neutral-950 text-white"} `}>
@@ -131,7 +135,7 @@ int main() {
                 <div className='h-60 w-60 rounded-lg mx-6'>
                     <div className='relative h-40 w-full border-2 border-neutral-900 p-2 rounded-lg bg-gradient-to-br from-black/60 to-neutral-800 overflow-hidden px-12 pt-6'>
                             <div className='absolute left-[42%] top-[19%] w-[14%] h-[8%] rounded-full bg-neutral-800'></div>
-                            <Image width={1000} height={1000} src="/mobileView.png" alt="mobileview" className='px-[2px] ring-6 ring-neutral-800 rounded-t-3xl object-cover' />
+                            <Image width={1000} height={1000} src="/mobileView.png" alt="mobileview" className='px-[2px] ring-6 ring-neutral-900 border-1 border-white/20 rounded-t-xl object-cover' />
                     </div>
                     <div className='p-1 text-[1rem] font-semibold text-white'>Responsive Design</div>
                     <div className='px-1 text-[0.8rem] font-semibold text-zinc-400'>Easily work on the code over the devices.</div>

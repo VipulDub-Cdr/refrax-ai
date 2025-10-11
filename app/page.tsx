@@ -20,13 +20,13 @@ const poppins = Poppins({
 
 export default function Home() {
 
-  useEffect(() => {
+  // useEffect(() => {
 
-    gsap.to("#loading", {
-      opacity: 0,
-      delay: 0,
-      duration: 2,
-    })
+  //   gsap.to("#loading", {
+  //     opacity: 0,
+  //     delay: 0,
+  //     duration: 2,
+  //   })
 
     // gsap.to("#spinner",{
     //   rotate:360,
@@ -35,14 +35,14 @@ export default function Home() {
     //   duration:1,
     // })
 
-    gsap.to("#loading", {
-      delay: 1.8,
-      duration: 0.1,
-      height: 0,
-      width: 0,
-    })
+  //   gsap.to("#loading", {
+  //     delay: 1.8,
+  //     duration: 0.1,
+  //     height: 0,
+  //     width: 0,
+  //   })
 
-  }, [])
+  // }, [])
 
   const router = useRouter();
 
@@ -50,14 +50,14 @@ export default function Home() {
   return (
     <div className={`relative dark h-full w-full bg-black`}>
 
-      <div
+      {/* <div
         id="loading"
         className="fixed top-0 left-0 w-full h-screen bg-black/60 backdrop-blur-lg z-[200] flex flex-col justify-center items-center py-80 text-neutral-300 text-xl"
       >
         <div className="text-xl">
           {`"Shaping your code, the way you write it"`}
         </div>
-      </div>
+      </div> */}
 
       {/* my-6 lg:my-9  md:px-50  px-3 */}
       <div className='fixed w-full top-0 right-0 z-100'>
@@ -97,9 +97,9 @@ export function Navbar() {
 
   const router = useRouter();
   //   rounded-3xl shadow-[#cacfe2] shadow-md 
-  return <div className="text-black dark:text-neutral-300 text-[1.1rem] w-full top-0 right-0 pl-3 md:px-4 py-2 flex flex-row justify-between md:justify-around items-center bg-white dark:bg-transparent backdrop-blur-lg">
+  return <div className="text-black dark:text-neutral-300 text-[1.1rem] w-full top-0 right-0 pl-6 md:px-4 py-2 flex flex-row justify-between md:justify-around items-center bg-white dark:bg-transparent backdrop-blur-lg">
 
-    <div className="flex flex-row justify-between items-center gap-3">
+    <div className="flex flex-row justify-between items-center gap-3 border-0 border-white">
       {/* <div className="border-2 border-gray-300 rounded-2xl px-4 py-3"></div> */}
       <div className="">ReFrax AI</div>
     </div>
