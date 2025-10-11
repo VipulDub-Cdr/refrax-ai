@@ -21,27 +21,37 @@ export default function Firstpage() {
     //     }
     // }, []);
 
-    useEffect(() => {
-        gsap.from(".image", {
-            x: -100,
-            delay: 0,
-            duration: 1,
-            stagger: 0.2,
-        })
+    // useEffect(() => {
+    //     gsap.from(".image", {
+    //         x: -100,
+    //         delay: 0,
+    //         duration: 1,
+    //         stagger: 0.2,
+    //     })
 
-        gsap.from(".heroText", {
-            y: 60,
-            opacity: 0,
-            duration: 1,
-            delay: 0,
-            stagger: 0.3,
-        })
+    //     gsap.from(".heroText", {
+    //         y: 60,
+    //         opacity: 0,
+    //         duration: 1,
+    //         delay: 0,
+    //         stagger: 0.3,
+    //     })
 
-    }, [])
+    // }, [])
 
 
     return (
-        <div className="min-full w-full bg-white dark:bg-black relative flex flex-col pb-20 select-none">
+        <div className="min-full w-full bg-white dark:bg-black relative flex flex-col border-0 border-white select-none">
+            <div
+            className="absolute inset-0 z-0"
+            style={{
+            backgroundImage: `
+            radial-gradient(circle at 50% 100%, rgba(58, 175, 169, 0.6) 0%, transparent 60%),
+            radial-gradient(circle at 50% 100%, rgba(255, 140, 0, 0.4) 0%, transparent 70%),
+            radial-gradient(circle at 50% 100%, rgba(238, 130, 238, 0.3) 0%, transparent 80%)
+            `,
+            }}
+            />
 
             <div className="w-full h-full max-w-screen flex flex-col md:flex-col justify-center items-center pt-20 md:pt-30 md:px-[12%] px-2 border-0 border-white">
 
@@ -75,22 +85,23 @@ export default function Firstpage() {
 
 
             <div className="relative w-full h-full border-0 border-white overflow-hidden flex">
-                <div id="demo" className='relative h-full w-full z-10 border-0 border-white flex justify-center items-center my-8 p-2 md:p-0'>
-                    <video ref={videoRef} autoPlay loop muted playsInline className="h-[50vh] md:h-full md:w-[75%] w-full rounded-lg border-0 border-neutral-900 ring-8 md:ring-12 md:ring-[#182332]/50 ring-[#182332]/50 object-cover brightness-70 grayscale-50">
+                <div id="demo" className='relative h-full w-full z-10 border-0  border-white flex justify-center items-center my-8 p-2 md:p-0'>
+                    <video ref={videoRef} autoPlay loop muted playsInline className="h-[50vh] bg-black md:h-full md:w-[70%] w-full rounded-lg border-0 border-neutral-900 ring-8 md:ring-12 md:ring-[#182332]/50 ring-[#182332]/50 object-cover brightness-70 grayscale-50">
                         <source src="/demoVideo3.mp4" type="video/mp4" />
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <div className="absolute w-full h-full brightness-60 hidden md:flex">
+                {/* <div className="absolute w-full h-full hidden md:flex brightness-0">
                     <Image width={1000} height={1000} src={`/dashboard1.png`} alt="dashboard" className="image absolute right-[60vw] h-[50vh] md:h-[82vh] md:w-[85%] w-full rounded-lg border-0 border-neutral-900 ring-8 md:ring-12 md:ring-zinc-700 ring-[#182332]/50 object-cover rotate-x-30 -rotate-y-30" />
                     <Image width={1000} height={1000} src={`/dashboard0.png`} alt="dashboard" className="image absolute right-[40vw] h-[50vh] md:h-[82vh] md:w-[85%] w-full rounded-lg border-0 border-neutral-900 ring-8 md:ring-12 md:ring-zinc-700 ring-[#182332]/50 object-cover rotate-x-30 -rotate-y-30" />
                     <Image width={1000} height={1000} src={`/dashboard1.png`} alt="dashboard" className="image absolute right-[20vw] h-[50vh] md:h-[82vh] md:w-[85%] w-full rounded-lg border-0 border-neutral-900 ring-8 md:ring-12 md:ring-zinc-700 ring-[#182332]/50 object-cover rotate-x-30 -rotate-y-30" />
                     <Image width={1000} height={1000} src={`/dashboard2.png`} alt="dashboard" className="image absolute left-[20vw] h-[50vh] md:h-[82vh] md:w-[85%] w-full rounded-lg border-0 border-neutral-900 ring-8 md:ring-12 md:ring-zinc-700 ring-[#182332]/50 object-cover rotate-x-30 -rotate-y-30" />
                     <Image width={1000} height={1000} src={`/dashboard3.png`} alt="dashboard" className="image absolute left-[40vw] h-[50vh] md:h-[82vh] md:w-[85%] w-full rounded-lg border-0 border-neutral-900 ring-8 md:ring-12 md:ring-zinc-700 ring-[#182332]/50 object-cover rotate-x-30 -rotate-y-30" />
                     <Image width={1000} height={1000} src={`/dashboard0.png`} alt="dashboard" className="image absolute left-[60vw] h-[50vh] md:h-[82vh] md:w-[85%] w-full rounded-lg border-0 border-neutral-900 ring-8 md:ring-12 md:ring-zinc-700 ring-[#182332]/50 object-cover rotate-x-30 -rotate-y-30" />
-                </div>
+                </div> */}
             </div>
 
+            <div className="w-full h-[80vh] bg-gradient-to-t from-black to-black/0 absolute bottom-0 z-5"></div>
 
 
             {/* <div className="relative w-full h-full border-0 border-white flex justify-center items-center rounded-lg overflow-hidden">
