@@ -7,6 +7,7 @@ import { ChangeEvent } from "react";
 import { Skeleton } from "@/components/ui/skeleton"
 import Image from "next/image";
 import Orb from "@/components/Orb";
+import gsap from "gsap";
 
 export default function Dashboard() {
     const { data: session, status } = useSession();
@@ -87,6 +88,7 @@ export default function Dashboard() {
         // console.log(p);
         if (p == "false") {
             setultiseedhiSampleFile(true);
+            setUploadingSample(false);
             return;
         }
         setUploadingSample(false);
@@ -142,7 +144,7 @@ export default function Dashboard() {
         <div className={`h-screen w-screen relative bg-black md:p-2 flex flex-row`}>
 
 
-            <div className="absolute top-0 left-0 w-full h-full z-0">
+            <div className="absolute top-0 left-0 w-full h-full z-0 bg-black">
 
                 {/* <div className="absolute inset-0 z-0" style={{ background: "radial-gradient(ellipse 50% 100% at 10% 0%, rgba(226, 232, 240, 0.15), transparent 65%), #000000", }} /> */}
 
@@ -162,12 +164,12 @@ export default function Dashboard() {
 
             { session ? <div className={`relative border-2 overflow-hidden border-neutral-900 rounded-xl bg-black w-full h-full text-white flex flex-row justify-between items-center z-10`}>
 
-                <div className={`w-full h-full absolute border-0 border-white transition-all delay-100 duration-300`}>
+                <div className={`orb w-full h-full mt-160 md:mt-0 absolute border-0 border-white transition-all delay-100 duration-300`}>
                     <Orb
                         hoverIntensity={0.5}
                         rotateOnHover={true}
                         hue={0}
-                        forceHoverState={false}
+                        forceHoverState={uploadingSample || uploadingCode }
                     />
                 </div>
 
@@ -230,9 +232,9 @@ export default function Dashboard() {
 
                 <div className="w-full h-[80%] bg-transparent flex flex-col mt-0 md:mt-[9%] justify-center items-center gap-0 z-10 border-0 border-red-500">
 
-                    <div className={`${rightBar ? "md:w-full md:flex" : "md:w-full md:flex"} border-0 border-teal-500 text-2xl md:text-[2.5rem] font-semibold text-center text-white transition-all delay-100 duration-300 flex justify-center items-center`}><div>{`Welcome, ${session.user?.name}`}</div></div>
-                    <div className={`${rightBar ? "md:w-full md:flex" : "md:w-full md:flex"} border-0 border-teal-500 pb-4 md:pb-0 text-2xl md:text-[2.5rem] font-semibold text-white text-center transition-all delay-100 duration-300 justify-center items-center`}>{`Can i help you with anything?`}</div>
-                    <div className={` ${rightBar ? "md:w-[60%] md:flex" : "md:w-[40%] md:flex"} border-0 border-teal-500 hidden pt-3 text-lg text-center font-light text-slate-200/80 transition-all delay-100 duration-300 justify-center items-center`}>{`Start formatting your code by first providing a sample, then the code to be formatted.`}</div>
+                    {/* <div className={`${rightBar ? "md:w-full md:flex" : "md:w-full md:flex"} border-0 border-teal-500 text-2xl md:text-[2.5rem] font-semibold text-center text-white transition-all delay-100 duration-300 flex justify-center items-center`}><div>{`ReFrax AI`}</div></div> */}
+                    <div className={`${rightBar ? "md:w-full md:flex" : "md:w-full md:flex"} border-0 border-teal-500 pb-4 md:pb-0 text-2xl md:text-[2.5rem] mt-10 md:mt-0 font-semibold text-white text-center transition-all delay-100 duration-300 justify-center items-center`}>{`Your Personal Code Formatter`}</div>
+                    <div className={` ${rightBar ? "md:w-[60%] md:flex" : "md:w-[40%] md:flex"} border-0 border-teal-500 md:pt-3 pb-6 md:pb-0 text-lg text-center font-light text-slate-200/80 transition-all delay-100 duration-300 justify-center items-center`}>{`Welcome ${session.user?.name}, Start formatting your code by first providing a sample, then the code to be formatted.`}</div>
 
 
 
