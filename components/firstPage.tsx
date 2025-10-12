@@ -55,10 +55,11 @@ export default function Firstpage() {
                         }}
                     />
             <StarsBackground
-            starColor={'#666666'}
+            starColor={'#262525'}
+            
             className={cn(
                 'absolute inset-0 flex items-center justify-center rounded-xl',
-                'dark:bg-[radial-gradient(ellipse_at_bottom,_#262626_0%,_#000_100%)] bg-[radial-gradient(ellipse_at_bottom,_#f5f5f5_0%,_#fff_100%)]',
+                'dark:bg-[radial-gradient(ellipse_at_bottom,_#262626_0%,_#000_80%)] bg-[radial-gradient(ellipse_at_bottom,_#f5f5f5_0%,_#fff_80%)]',
             )}
             />
 

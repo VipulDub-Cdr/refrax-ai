@@ -8,7 +8,8 @@ import Image from "next/image";
 import Orb from "@/components/Orb";
 import gsap from "gsap";
 import { signOut } from "next-auth/react";
-import { Check } from "lucide-react";    
+import { Check } from "lucide-react";
+import { BorderTrail } from "./motion-primitives/border-trail";    
 
 export default function Dashboard() {
     const [pattern, setPattern] = useState<string>("");
@@ -95,45 +96,6 @@ export default function Dashboard() {
         setPattern(p);
     }
 
-    useEffect(() => {
-        async function PatternExistCheck() {
-            if (status == "authenticated") {
-                const response = await fetch("/api/pattern", {
-                    method: "POST",
-                    headers: { "Content-Type": "application/json" },
-                    body: JSON.stringify({
-                        // name: session.user?.name,
-                        // email: session.user?.email,
-                    })
-                })
-                const data = await response.json();
-                if (data.userpattern == "") {
-                    setPattern(data.userpattern);
-                }
-            }
-        }
-        PatternExistCheck();
-    }, [status, pattern])
-
-    useEffect(() => {
-        if (status === "unauthenticated") {
-            router.push("/signin");
-        }
-    }, [status, router]);
-
-    if (status === "loading") {
-        return <div className="w-[100vw] h-[100vh] bg-[#0A0A0A] flex flex-col justify-center items-center gap-2">
-            <Skeleton className="bg-neutral-700 w-[50%] h-[8%] md:w-[15%] md:h-[9%] rounded-lg" />
-            {/* <Skeleton className="w-[85%] h-[5%] py-[4%] md:w-[30%] md:h-[6%] md:py-[1%] rounded-lg" /> */}
-            <Skeleton className="bg-neutral-700 w-[85%] h-[5%] py-[4%] md:w-[30%] md:h-[6%] md:py-[1%] rounded-lg" />
-            <Skeleton className="bg-neutral-700 w-[85%] h-[5%] py-[4%] md:w-[30%] md:h-[6%] md:py-[1%] rounded-lg" />
-            <div className="w-full flex flex-row justify-center items-center gap-2 md:gap-3">
-                <Skeleton className="bg-neutral-700 w-[28%] h-7 md:w-[8%] rounded-lg" />
-                <Skeleton className="bg-neutral-700 w-[28%] h-7 md:w-[8%] rounded-lg" />
-            </div>
-        </div>
-
-    }
     // else{
     //     console.log(session);
     // }
@@ -142,7 +104,6 @@ export default function Dashboard() {
 
 
         <div className={`h-[80%] w-[95%] md:ring-0 ring-4 ring-neutral-400 md:w-[80%] relative bg-black border-2 border-white/30 md:p-2 flex flex-row rounded-3xl overflow-hidden`}>
-
 
             <div className="absolute top-0 left-0 w-full h-full z-0 bg-black">
 
