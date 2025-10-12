@@ -6,9 +6,9 @@ import Image from "next/image";
 import RotatingText from './RotatingText'
 import SampleDashboard from "./sample";
 import DarkVeil from "./DarkVeil";
-import { HexagonBackground } from "./animate-ui/components/backgrounds/hexagon";
 import gsap from "gsap";
 import { cn } from '@/lib/utils';
+import { StarsBackground } from "./animate-ui/components/backgrounds/stars";
 
 export default function Firstpage() {
 
@@ -39,18 +39,27 @@ export default function Firstpage() {
 
     // }, [])
 
-
     return (
         <div className="min-full w-full bg-white dark:bg-black relative flex flex-col border-0 border-white select-none">
             <div
-            className="absolute inset-0 z-0"
-            style={{
-            backgroundImage: `
-            radial-gradient(circle at 50% 100%, rgba(58, 175, 169, 0.6) 0%, transparent 60%),
-            radial-gradient(circle at 50% 100%, rgba(255, 140, 0, 0.4) 0%, transparent 70%),
-            radial-gradient(circle at 50% 100%, rgba(238, 130, 238, 0.3) 0%, transparent 80%)
-            `,
-            }}
+                className="absolute inset-0 z-10"
+                style={{
+                    backgroundImage: `
+                    radial-gradient(circle at 50% 70%,
+                    rgba(58, 123, 255, 0.25) 0%,
+                    rgba(100, 149, 237, 0.15) 25%,
+                    rgba(123, 104, 238, 0.07) 35%,
+                    transparent 50%
+                    )
+                    `,
+                        }}
+                    />
+            <StarsBackground
+            starColor={'#666666'}
+            className={cn(
+                'absolute inset-0 flex items-center justify-center rounded-xl',
+                'dark:bg-[radial-gradient(ellipse_at_bottom,_#262626_0%,_#000_100%)] bg-[radial-gradient(ellipse_at_bottom,_#f5f5f5_0%,_#fff_100%)]',
+            )}
             />
 
             <div className="w-full h-full max-w-screen flex flex-col md:flex-col justify-center items-center pt-20 md:pt-30 md:px-[12%] px-2 border-0 border-white">
@@ -84,7 +93,7 @@ export default function Firstpage() {
             </div>
 
 
-            <div className="relative w-full h-full border-0 border-white overflow-hidden flex">
+            <div className="relative md:hidden w-full h-full border-0 border-white overflow-hidden flex">
                 <div id="demo" className='relative h-full w-full z-10 border-0  border-white flex justify-center items-center my-8 p-2 md:p-0'>
                     <video ref={videoRef} autoPlay loop muted playsInline className="h-[50vh] bg-black md:h-full md:w-[70%] w-full rounded-lg border-0 border-neutral-900 ring-8 md:ring-12 md:ring-[#182332]/50 ring-[#182332]/50 object-cover brightness-70 grayscale-50">
                         <source src="/demoVideo3.mp4" type="video/mp4" />
@@ -101,12 +110,12 @@ export default function Firstpage() {
                 </div> */}
             </div>
 
-            <div className="w-full h-[80vh] bg-gradient-to-t from-black to-black/0 absolute bottom-0 z-5"></div>
+            <div className="w-full h-20 md:h-[60vh] bg-gradient-to-t from-black to-black/0 absolute bottom-0 z-20 flex"></div>
 
 
-            {/* <div className="relative w-full h-full border-0 border-white flex justify-center items-center rounded-lg overflow-hidden">
+            <div className="hidden md:flex justify-center items-center">
                 <SampleDashboard />
-            </div> */}
+            </div>
 
         </div>
     )
