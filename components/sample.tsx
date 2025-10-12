@@ -9,7 +9,6 @@ import Orb from "@/components/Orb";
 import gsap from "gsap";
 import { signOut } from "next-auth/react";
 import { Check } from "lucide-react";
-import { BorderTrail } from "./motion-primitives/border-trail";    
 
 export default function Dashboard() {
     const [pattern, setPattern] = useState<string>("");
