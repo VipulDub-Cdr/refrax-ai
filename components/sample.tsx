@@ -103,6 +103,7 @@ export default function Dashboard() {
 
 
         <div className={`h-[80%] w-[95%] md:ring-0 ring-4 ring-neutral-400 md:w-[80%] relative bg-black border-2 border-white/30 md:p-2 flex flex-row rounded-3xl overflow-hidden`}>
+                
 
             <div className="absolute top-0 left-0 w-full h-full z-0 bg-black">
 

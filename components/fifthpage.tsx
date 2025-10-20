@@ -7,14 +7,7 @@ import {
 
 export default function FifthPage() {
     return (
-        <div id="faqs" className="w-screen h-full bg-black md:pt-30" style={{
-            background: "#000000",
-            backgroundImage: `
-            linear-gradient(to right, rgba(75, 85, 99, 0.1) 1px, transparent 1px),
-            linear-gradient(to bottom, rgba(75, 85, 99, 0.1) 1px, transparent 1px)
-            `,
-            backgroundSize: "40px 40px",
-            }}>
+        <div id="faqs" className="w-screen h-full bg-black md:pt-30">
 
             <div className="text-[2rem]/10 text-white text-center md:text-[3rem] px-2 md:ml-7 flex flex-row justify-center items-center font-semibold">Frequently Asked Questions</div>
             <div className="text-[1.2rem] text-neutral-400 px-2 md:ml-7 flex flex-row justify-center items-center text-center md:pt-4">Amet minim mollit non deserunt ullamco est sit aliqua dolor do</div>

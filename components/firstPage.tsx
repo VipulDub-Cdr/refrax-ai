@@ -9,7 +9,6 @@ import DarkVeil from "./DarkVeil";
 import gsap from "gsap";
 import { cn } from '@/lib/utils';
 import { StarsBackground } from "./animate-ui/components/backgrounds/stars";
-import { MacbookPro } from "./ui/macbook-pro";
 
 export default function Firstpage() {
 
@@ -115,7 +114,7 @@ export default function Firstpage() {
             <div className="w-full h-20 md:h-[60vh] bg-gradient-to-t from-black to-black/0 absolute bottom-0 z-20 flex"></div>
 
 
-            <div className="hidden md:flex justify-center items-center">
+            <div className="relative hidden md:flex justify-center items-center overflow-hidden">
                 <SampleDashboard />
             </div>
 
